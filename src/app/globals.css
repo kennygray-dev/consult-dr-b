@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --primary:   #09357E;
+  --secondary: #9E7F2E;
+  --dark:      #0a0e1a;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
+}
+
+/* ─── Components ─────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Gold divider rule */
+  .gold-rule {
+    @apply h-px w-16 bg-secondary;
+  }
+
+  /* Section wrapper */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-primary text-white
+           px-7 py-3.5 font-body font-semibold text-sm tracking-wide
+           uppercase transition-all duration-300
+           hover:bg-secondary hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+
+  /* Outlined secondary button */
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border-2 border-primary text-primary
+           px-7 py-3 font-body font-semibold text-sm tracking-wide
+           uppercase transition-all duration-300
+           hover:bg-primary hover:text-white hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Gold-outlined button (for dark backgrounds) */
+  .btn-gold {
+    @apply inline-flex items-center gap-2 border-2 border-secondary text-secondary
+           px-7 py-3 font-body font-semibold text-sm tracking-wide
+           uppercase transition-all duration-300
+           hover:bg-secondary hover:text-white hover:-translate-y-0.5;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white border border-gray-100 shadow-sm hover:shadow-md
+           transition-shadow duration-300;
+  }
+
+  /* Dark card (for dark section backgrounds) */
+  .card-dark {
+    @apply bg-dark-card border border-white/10 hover:border-secondary/40
+           transition-colors duration-300;
+  }
+
+  /* Section headings */
+  .section-eyebrow {
+    @apply text-secondary text-xs font-semibold tracking-[0.2em] uppercase;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl lg:text-5xl text-primary leading-tight;
+  }
+
+  .section-title-light {
+    @apply font-heading text-3xl md:text-4xl lg:text-5xl text-white leading-tight;
+  }
+}
+
+/* ─── Utilities ──────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+
+  .text-balance { text-wrap: balance; }
+}

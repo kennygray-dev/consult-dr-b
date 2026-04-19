@@ -1,0 +1,105 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { IMAGES } from "@/lib/images";
+import Reveal from "@/components/ui/Reveal";
+
+const SERVICES = [
+  {
+    href: "/services/longevity-performance",
+    image: IMAGES.serviceLongevity.src,
+    imageAlt: "Longevity & Performance Medicine",
+    title: "Longevity & Performance Medicine",
+    tags: ["Anti-aging protocols", "Hormone optimisation", "Long-term health planning"],
+  },
+  {
+    href: "/services/aesthetics-skin",
+    image: IMAGES.serviceAssessment.src,
+    imageAlt: "Aesthetic & Skin Medicine",
+    title: "Aesthetic & Skin Medicine",
+    tags: ["Skin rejuvenation", "Advanced aesthetics", "Medical-grade treatments"],
+  },
+  {
+    href: "/services/metabolic-weight",
+    image: IMAGES.serviceMetabolic.src,
+    imageAlt: "Metabolic & Weight Optimization",
+    title: "Metabolic & Weight Optimization",
+    tags: ["GLP therapies", "Body composition", "Metabolic reset"],
+  },
+  {
+    href: "/services/regenerative-cellular",
+    image: IMAGES.peptideHero.src,
+    imageAlt: "Regenerative & Cellular Medicine",
+    title: "Regenerative & Cellular Medicine",
+    tags: ["Peptide protocols", "Cellular repair", "Post-surgical recovery"],
+  },
+  {
+    href: "/services/diagnostics-testing",
+    image: IMAGES.serviceAssessment.src,
+    imageAlt: "Advanced Diagnostics & Testing",
+    title: "Advanced Diagnostics & Testing",
+    tags: ["Biomarker analysis", "Functional testing", "Precision diagnostics"],
+  },
+  {
+    href: "/services/mental-performance",
+    image: IMAGES.servicesHero.src,
+    imageAlt: "Mental Performance & Wellbeing",
+    title: "Mental Performance & Wellbeing",
+    tags: ["Cognitive optimisation", "Stress resilience", "Sleep & recovery"],
+  },
+];
+
+export default function PersonalizedProgramsSection() {
+  return (
+    <section className="py-24" style={{ backgroundColor: "#F8F4EA" }}>
+      <div className="section-container space-y-4">
+        <div className="grid lg:grid-cols-2 gap-8 items-end mb-12">
+          <Reveal>
+            <h2 className="font-heading text-3xl text-black leading-tight">
+              Personalized Programs for<br />Health Optimization
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-gray-500 leading-relaxed">
+              Our programs provide advanced medical services, precise diagnostics, and clinical programs designed to optimise long-term health and performance.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Horizontal scroll cards */}
+        <div className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
+          {SERVICES.map((svc, i) => (
+            <Reveal key={svc.href} delay={i * 0.08}>
+              <Link
+                href={svc.href}
+                className="group relative shrink-0 w-[420px] h-[440px] overflow-hidden snap-start block rounded-xl"
+              >
+                <Image
+                  src={svc.image}
+                  alt={svc.imageAlt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 space-y-3">
+                  <h3 className="font-heading text-white text-lg leading-snug">{svc.title}</h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {svc.tags.map((tag) => (
+                      <span key={tag} className="text-white/70 text-xs border border-white/20 px-2 py-0.5">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center gap-1 text-white text-xs mt-1">
+                    Learn More <ArrowRight size={11} />
+                  </span>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
