@@ -55,8 +55,8 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Let's Start Your Journey"
         subtitle="Reach out to our team and take the first step toward optimal health."
-        image={IMAGES.contactHero.src}
-        imageAlt={IMAGES.contactHero.alt}
+        image="/team.png"
+        imageAlt="Consult Dr B team"
         blurDataURL={IMAGES.contactHero.blurDataURL}
       />
 

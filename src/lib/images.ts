@@ -62,39 +62,103 @@ export const IMAGES = {
 
   // Services
   servicesHero: {
-    src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1920&q=80",
+    src: "/cta.jpg",
     alt: "Advanced clinical services laboratory",
     blurDataURL: PRIMARY_BLUR,
     width: 1920,
     height: 1080,
   },
   serviceAssessment: {
-    src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&q=80",
-    alt: "Comprehensive health assessment in progress",
+    src: "/wellness-specialized.png",
+    alt: "Wellness and specialized medical care consultation",
     blurDataURL: PRIMARY_BLUR,
     width: 900,
     height: 675,
   },
   serviceHormone: {
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80",
-    alt: "Hormone optimisation consultation",
+    src: "/regenerative.png",
+    alt: "Regenerative and cellular therapy treatment",
     blurDataURL: PRIMARY_BLUR,
     width: 900,
     height: 675,
   },
   serviceMetabolic: {
-    src: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=900&q=80",
+    src: "/metabolic.png",
     alt: "Metabolic medicine testing and analysis",
     blurDataURL: PRIMARY_BLUR,
     width: 900,
     height: 675,
   },
   serviceLongevity: {
-    src: "https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=900&q=80",
-    alt: "Longevity and anti-aging medical protocols",
+    src: "/advanced-longevity.png",
+    alt: "Advanced longevity and performance medicine program",
     blurDataURL: PRIMARY_BLUR,
     width: 900,
     height: 675,
+  },
+  serviceAestheticSkin: {
+    src: "/aesthetic-skin.png",
+    alt: "Aesthetic skin and regenerative dermatology treatments",
+    blurDataURL: PRIMARY_BLUR,
+    width: 900,
+    height: 675,
+  },
+  servicePostSurgical: {
+    src: "/post-surgical.png",
+    alt: "Post-surgical recovery and wound healing support",
+    blurDataURL: PRIMARY_BLUR,
+    width: 900,
+    height: 675,
+  },
+
+  // ─── Service Hero Images (Standardized) ────────────────────────────────
+
+  serviceMetabolicHero: {
+    src: "/metabolic-hero.png",
+    alt: "Metabolic & Weight Optimization Hero Image",
+    blurDataURL: PRIMARY_BLUR,
+    width: 1920,
+    height: 1080,
+  },
+
+  serviceLongevityHero: {
+    src: "/advanced-longevity-hero.png",
+    alt: "Advanced Longevity & Performance Medicine Hero Image",
+    blurDataURL: PRIMARY_BLUR,
+    width: 1920,
+    height: 1080,
+  },
+
+  serviceAssessmentHero: {
+    src: "/wellness-specialized-hero1.png",
+    alt: "Wellness & Specialized Care Hero Image",
+    blurDataURL: PRIMARY_BLUR,
+    width: 1920,
+    height: 1080,
+  },
+
+  serviceHormoneHero: {
+    src: "/regenerative-hero.png",
+    alt: "Regenerative & Cellular Medicine Hero Image",
+    blurDataURL: PRIMARY_BLUR,
+    width: 1920,
+    height: 1080,
+  },
+
+  serviceAestheticSkinHero: {
+    src: "/aesthetic-skin-hero.png",
+    alt: "Aesthetic & Skin Medicine Hero Image",
+    blurDataURL: PRIMARY_BLUR,
+    width: 1920,
+    height: 1080,
+  },
+
+  servicePostSurgicalHero: {
+    src: "/post-surgical-hero1.png",
+    alt: "Post-Surgical Recovery & Wound Healing Hero Image",
+    blurDataURL: PRIMARY_BLUR,
+    width: 1920,
+    height: 1080,
   },
 
   // Programs

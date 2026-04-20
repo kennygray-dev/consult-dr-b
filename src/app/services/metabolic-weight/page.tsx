@@ -13,12 +13,12 @@ export default function MetabolicWeightPage() {
       // ── Hero ──────────────────────────────────────────────────────────
       hero={{
         eyebrow: "Metabolic & Weight Optimization",
-        title: "Reclaim Your Metabolism",
+        title: "Metabolic & Weight Optimization",
         subtitle:
           "Physician-led programs designed to restore metabolic balance, support sustainable weight management, and improve overall body composition through clinically guided care.",
-        image: IMAGES.serviceMetabolic.src,
-        imageAlt: IMAGES.serviceMetabolic.alt,
-        blurDataURL: IMAGES.serviceMetabolic.blurDataURL,
+        image: IMAGES.serviceMetabolicHero.src,
+        imageAlt: IMAGES.serviceMetabolicHero.alt,
+        blurDataURL: IMAGES.serviceMetabolicHero.blurDataURL,
       }}
 
       // ── Approach ──────────────────────────────────────────────────────
@@ -47,7 +47,7 @@ export default function MetabolicWeightPage() {
           "Body composition challenges (fat vs muscle balance)",
         ],
         // 🔁 Replace with your own image when ready
-        backgroundImage: IMAGES.serviceMetabolic.src,
+        backgroundImage: "/personalized-metabolic.png",
         backgroundImageAlt: IMAGES.serviceMetabolic.alt,
       }}
 
@@ -56,25 +56,25 @@ export default function MetabolicWeightPage() {
         sectionTitle: "Designed for Measurable Transformation",
         cards: [
           {
-            image: IMAGES.serviceMetabolic.src,
+            image: "/metabolic1.png",
             imageAlt: "GLP Weight Management",
             title: "GLP Weight Management",
             desc: "Clinically guided weight management using advanced therapies to regulate appetite and support sustainable fat loss.",
           },
           {
-            image: IMAGES.serviceMetabolic.src,
+            image: "/metabolic2.png",
             imageAlt: "Metabolic Health Optimisation",
             title: "Metabolic Health Optimisation",
             desc: "Targeted strategies designed to improve metabolic efficiency, energy balance, and overall physiological function.",
           },
           {
-            image: IMAGES.serviceMetabolic.src,
+            image: "/metabolic3.png",
             imageAlt: "Body Composition Management",
             title: "Body Composition Management",
             desc: "Programs focused on reducing body fat while preserving or improving lean muscle mass.",
           },
           {
-            image: IMAGES.serviceMetabolic.src,
+            image: "/metabolic44.png",
             imageAlt: "Medical Weight Loss Protocols",
             title: "Medical Weight Loss Protocols",
             desc: "Structured, physician-supervised programs tailored to your metabolic profile and health goals.",
@@ -92,7 +92,7 @@ export default function MetabolicWeightPage() {
           { title: "Ongoing Medical Support",    desc: "Continuous monitoring and adjustments to ensure optimal results." },
         ],
         // 🔁 Replace with your own image when ready
-        backgroundImage: IMAGES.programsHero.src,
+        backgroundImage: "/personalized-metabolic.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
@@ -126,37 +126,38 @@ export default function MetabolicWeightPage() {
 
       // ── Related Services ──────────────────────────────────────────────
       relatedServices={[
-        {
-          href: "/services/regenerative-cellular",
-          image: IMAGES.peptideHero.src,
-          imageAlt: "Regenerative & Cellular Medicine",
-          label: "Regenerative & Cellular Medicine",
-        },
-        {
-          href: "/services/longevity-performance",
-          image: IMAGES.serviceLongevity.src,
-          imageAlt: "Longevity & Performance Medicine",
-          label: "Longevity & Performance Medicine",
-        },
-        {
-          href: "/services/aesthetics-skin",
-          image: IMAGES.serviceAssessment.src,
-          imageAlt: "Aesthetic & Skin Medicine",
-          label: "Aesthetic & Skin Medicine",
-        },
-        {
-          href: "/services/post-surgical-recovery",
-          image: IMAGES.servicesHero.src,
-          imageAlt: "Post-Surgical Recovery & Wound Healing",
-          label: "Post-Surgical Recovery & Wound Healing",
-        },
-        {
-          href: "/services/specialized-wellness",
-          image: IMAGES.coachHero.src,
-          imageAlt: "Specialized Wellness Programs",
-          label: "Specialized Wellness Programs",
-        },
-      ]}
+
+  {
+    href: "/services/regenerative-cellular",
+    image: IMAGES.serviceHormone.src,
+    imageAlt: "Regenerative & Cellular Medicine",
+    label: "Regenerative & Cellular Medicine",
+  },
+  {
+    href: "/services/longevity-performance",
+    image: IMAGES.serviceLongevity.src,
+    imageAlt: "Longevity & Performance Medicine",
+    label: "Longevity & Performance Medicine",
+  },
+  {
+    href: "/services/aesthetics-skin",
+    image: IMAGES.serviceAestheticSkin.src,
+    imageAlt: "Aesthetic & Skin Medicine",
+    label: "Aesthetic & Skin Medicine",
+  },
+  {
+    href: "/services/post-surgical-recovery",
+    image: IMAGES.servicePostSurgical.src,
+    imageAlt: "Post-Surgical Recovery & Wound Healing",
+    label: "Post-Surgical Recovery & Wound Healing",
+  },
+  {
+    href: "/services/wellness-specialized",
+    image: IMAGES.serviceAssessment.src,
+    imageAlt: "Specialized Wellness Programs",
+    label: "Specialized Wellness Programs",
+  },
+]}
     />
   );
 }

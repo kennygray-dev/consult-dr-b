@@ -13,14 +13,14 @@ export default function SpecializedWellnessPage() {
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
       hero={{
-        eyebrow: "Specialized Wellness Programs",
-        title: "Comprehensive Wellness, Personalised for You",
-        subtitle:
-          "Comprehensive, physician-guided programs designed to support specific health needs, lifestyle optimisation, and long-term wellbeing through personalised care.",
-        image: IMAGES.coachHero.src,
-        imageAlt: IMAGES.coachHero.alt,
-        blurDataURL: IMAGES.coachHero.blurDataURL,
-      }}
+  eyebrow: "Specialized Wellness Programs",
+  title: "Comprehensive Wellness, Personalised for You",
+  subtitle:
+    "Comprehensive, physician-guided programs designed to support specific health needs, lifestyle optimisation, and long-term wellbeing through personalised care.",
+  image: IMAGES.serviceAssessmentHero.src,
+  imageAlt: IMAGES.serviceAssessmentHero.alt,
+  blurDataURL: IMAGES.serviceAssessmentHero.blurDataURL,
+}}
 
       // ── Approach ──────────────────────────────────────────────────────
       approach={{
@@ -30,9 +30,9 @@ export default function SpecializedWellnessPage() {
           "By combining clinical expertise, advanced diagnostics, and personalised care strategies, we provide structured programs that support both everyday wellness and more specific medical requirements.",
         ],
         ctaText: "Book a Wellness Consultation",
-        image: IMAGES.coachHero.src,
-        imageAlt: IMAGES.coachHero.alt,
-        blurDataURL: IMAGES.coachHero.blurDataURL,
+        image: IMAGES.serviceAssessment.src,
+        imageAlt: IMAGES.serviceAssessment.alt,
+        blurDataURL: IMAGES.serviceAssessment.blurDataURL,
       }}
 
       // ── Conditions ────────────────────────────────────────────────────
@@ -47,8 +47,8 @@ export default function SpecializedWellnessPage() {
           "Advanced diagnostics and health monitoring",
           "Personalised wellness planning",
         ],
-        backgroundImage: IMAGES.coachHero.src,
-        backgroundImageAlt: IMAGES.coachHero.alt,
+        backgroundImage: IMAGES.serviceAssessmentHero.src,
+        backgroundImageAlt: IMAGES.serviceAssessmentHero.alt,
       }}
 
       // ── Programs Grid ─────────────────────────────────────────────────
@@ -56,37 +56,37 @@ export default function SpecializedWellnessPage() {
         sectionTitle: "Programs Designed for Every Stage of Life",
         cards: [
           {
-            image: IMAGES.coachHero.src,
+            image: "/wellness1.png",
             imageAlt: "Feminine Health",
             title: "Feminine Health",
             desc: "Personalised care addressing women's health needs through clinically guided assessment and treatment.",
           },
           {
-            image: IMAGES.coachHero.src,
+            image: "/wellness2.png",
             imageAlt: "Foot Care & Podiatric Wellness",
             title: "Foot Care & Podiatric Wellness",
             desc: "Targeted care focused on foot health, mobility, and overall physical comfort.",
           },
           {
-            image: IMAGES.coachHero.src,
+            image: "/wellness3.png",
             imageAlt: "Concierge & Tele-Medical Services",
             title: "Concierge & Tele-Medical Services",
             desc: "Patient-centred care delivered through direct access, remote consultations and personalised coordination.",
           },
           {
-            image: IMAGES.coachHero.src,
+            image: "/wellness4.png",
             imageAlt: "Fitness & Athletic Body Optimisation",
             title: "Fitness & Athletic Body Optimisation",
             desc: "Programs designed to improve physical performance, strength, and overall fitness through medically guided strategies.",
           },
           {
-            image: IMAGES.coachHero.src,
+            image: "/wellness5.png",
             imageAlt: "Medical Rehabilitation & Recovery Programs",
             title: "Medical Rehabilitation & Recovery Programs",
             desc: "Patient-centred support focused on restoring function, mobility, and overall physical wellbeing.",
           },
           {
-            image: IMAGES.coachHero.src,
+            image: "/wellness6.png",
             imageAlt: "Santatorium & Restorative Health Retreat Therapy",
             title: "Santatorium & Restorative Health Retreat Therapy",
             desc: "Immersive programs designed to support recovery, relaxation, and full-body restoration.",
@@ -115,7 +115,7 @@ export default function SpecializedWellnessPage() {
             desc: "Continued support to maintain and enhance results over time.",
           },
         ],
-        backgroundImage: IMAGES.programsHero.src,
+        backgroundImage: "/personalized-wellness.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
@@ -151,38 +151,38 @@ export default function SpecializedWellnessPage() {
       }}
 
       // ── Related Services ──────────────────────────────────────────────
-      relatedServices={[
-        {
-          href: "/services/metabolic-weight",
-          image: IMAGES.serviceMetabolic.src,
-          imageAlt: "Metabolic & Weight Optimization",
-          label: "Metabolic & Weight Optimization",
-        },
-        {
-          href: "/services/regenerative-cellular",
-          image: IMAGES.peptideHero.src,
-          imageAlt: "Regenerative & Cellular Medicine",
-          label: "Regenerative & Cellular Medicine",
-        },
-        {
-          href: "/services/longevity-performance",
-          image: IMAGES.serviceLongevity.src,
-          imageAlt: "Longevity & Performance Medicine",
-          label: "Longevity & Performance Medicine",
-        },
-        {
-          href: "/services/aesthetics-skin",
-          image: IMAGES.serviceAssessment.src,
-          imageAlt: "Aesthetic & Skin Medicine",
-          label: "Aesthetic & Skin Medicine",
-        },
-        {
-          href: "/services/post-surgical-recovery",
-          image: IMAGES.servicesHero.src,
-          imageAlt: "Post-Surgical Recovery & Wound Healing",
-          label: "Post-Surgical Recovery & Wound Healing",
-        },
-      ]}
+       relatedServices={[
+  {
+    href: "/services/metabolic-weight",
+    image: IMAGES.serviceMetabolic.src,
+    imageAlt: "Metabolic & Weight Optimization",
+    label: "Metabolic & Weight Optimization",
+  },
+  {
+    href: "/services/regenerative-cellular",
+    image: IMAGES.serviceHormone.src,
+    imageAlt: "Regenerative & Cellular Medicine",
+    label: "Regenerative & Cellular Medicine",
+  },
+  {
+    href: "/services/longevity-performance",
+    image: IMAGES.serviceLongevity.src,
+    imageAlt: "Longevity & Performance Medicine",
+    label: "Longevity & Performance Medicine",
+  },
+  {
+    href: "/services/aesthetics-skin",
+    image: IMAGES.serviceAestheticSkin.src,
+    imageAlt: "Aesthetic & Skin Medicine",
+    label: "Aesthetic & Skin Medicine",
+  },
+  {
+    href: "/services/post-surgical-recovery",
+    image: IMAGES.servicePostSurgical.src,
+    imageAlt: "Post-Surgical Recovery & Wound Healing",
+    label: "Post-Surgical Recovery & Wound Healing",
+  },
+]}
     />
   );
 }

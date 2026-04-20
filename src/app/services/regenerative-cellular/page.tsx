@@ -12,15 +12,14 @@ export default function RegenerativeCellularPage() {
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
       hero={{
-        eyebrow: "Regenerative & Cellular Medicine",
-        title: "Restoring Health at the Cellular Level",
-        subtitle:
-          "Advanced therapies designed to support cellular repair, accelerate recovery, and restore the body's natural healing processes through physician-led precision care.",
-        image: IMAGES.peptideHero.src,
-        imageAlt: IMAGES.peptideHero.alt,
-        blurDataURL: IMAGES.peptideHero.blurDataURL,
-      }}
-
+  eyebrow: "Regenerative & Cellular Medicine",
+  title: "Regenerative & Cellular Medicine",
+  subtitle:
+    "Advanced therapies designed to support cellular repair, accelerate recovery, and restore the body's natural healing processes through physician-led precision care.",
+  image: IMAGES.serviceHormoneHero.src,
+  imageAlt: IMAGES.serviceHormoneHero.alt,
+  blurDataURL: IMAGES.serviceHormoneHero.blurDataURL,
+}}
       // ── Approach ──────────────────────────────────────────────────────
       approach={{
         title: "Restoring Health at the Cellular Level",
@@ -30,9 +29,9 @@ export default function RegenerativeCellularPage() {
         ],
         ctaText: "Start Your Regenerative Journey",
         // 🔁 Replace with your own image when ready
-        image: IMAGES.peptideHero.src,
-        imageAlt: IMAGES.peptideHero.alt,
-        blurDataURL: IMAGES.peptideHero.blurDataURL,
+        image: IMAGES.serviceHormone.src,
+        imageAlt: IMAGES.serviceHormone.alt,
+        blurDataURL: IMAGES.serviceHormone.blurDataURL,
       }}
 
       // ── Conditions ────────────────────────────────────────────────────
@@ -48,8 +47,8 @@ export default function RegenerativeCellularPage() {
           "Long-term restoration after illness",
         ],
         // 🔁 Replace with your own image when ready
-        backgroundImage: IMAGES.peptideHero.src,
-        backgroundImageAlt: IMAGES.peptideHero.alt,
+        backgroundImage: IMAGES.serviceHormoneHero.src,
+        backgroundImageAlt: IMAGES.serviceHormoneHero.src,
       }}
 
       // ── Programs Grid ─────────────────────────────────────────────────
@@ -57,37 +56,37 @@ export default function RegenerativeCellularPage() {
         sectionTitle: "Programs Within Regenerative & Cellular Medicine",
         cards: [
           {
-            image: IMAGES.peptideHero.src,
+            image: "/regenerative1.png",
             imageAlt: "Peptide Body Remodeling",
             title: "Peptide Body Remodeling",
             desc: "Targeted protocols designed to support cellular repair, tissue regeneration, and improved body composition.",
           },
           {
-            image: IMAGES.peptideHero.src,
+            image: "/regenerative2.png",
             imageAlt: "Detox & Cellular Reset Programs",
             title: "Detox & Cellular Reset Programs",
             desc: "Structured programs designed to support detoxification pathways and restore internal balance.",
           },
           {
-            image: IMAGES.peptideHero.src,
+            image: "/regenerative3.png",
             imageAlt: "Post-Chemotherapy Recovery & Cellular Restoration",
             title: "Post-Chemotherapy Recovery & Cellular Restoration",
             desc: "Integrative programs designed to improve recovery, restore energy, and rebuild physiological function after treatment.",
           },
           {
-            image: IMAGES.peptideHero.src,
+            image: "/regenerative4.png",
             imageAlt: "Post-Surgical Recovery & Regenerative Support",
             title: "Post-Surgical Recovery & Regenerative Support",
             desc: "Programs focused on accelerating healing, reduce recovery time, and restore tissue repair.",
           },
           {
-            image: IMAGES.peptideHero.src,
+            image: "/regenerative5.png",
             imageAlt: "Rehabilitation & Functional Recovery Programs",
             title: "Rehabilitation & Functional Recovery Programs",
             desc: "Comprehensive recovery plans focused on restoring movement, strength, and physical function.",
           },
           {
-            image: IMAGES.peptideHero.src,
+            image: "/regenerative6.png",
             imageAlt: "International Health Optimization",
             title: "International Health Optimization",
             desc: "Coordinated care programs for patients requiring international-standard recovery and regenerative support across distances.",
@@ -117,7 +116,7 @@ export default function RegenerativeCellularPage() {
           },
         ],
         // 🔁 Replace with your own image when ready
-        backgroundImage: IMAGES.programsHero.src,
+        backgroundImage: "/personal-regen.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
@@ -155,37 +154,38 @@ export default function RegenerativeCellularPage() {
 
       // ── Related Services ──────────────────────────────────────────────
       relatedServices={[
-        {
-          href: "/services/metabolic-weight",
-          image: IMAGES.serviceMetabolic.src,
-          imageAlt: "Metabolic & Weight Optimization",
-          label: "Metabolic & Weight Optimization",
-        },
-        {
-          href: "/services/longevity-performance",
-          image: IMAGES.serviceLongevity.src,
-          imageAlt: "Longevity & Performance Medicine",
-          label: "Longevity & Performance Medicine",
-        },
-        {
-          href: "/services/aesthetics-skin",
-          image: IMAGES.serviceAssessment.src,
-          imageAlt: "Aesthetic & Skin Medicine",
-          label: "Aesthetic & Skin Medicine",
-        },
-        {
-          href: "/services/post-surgical-recovery",
-          image: IMAGES.servicesHero.src,
-          imageAlt: "Post-Surgical Recovery & Wound Healing",
-          label: "Post-Surgical Recovery & Wound Healing",
-        },
-        {
-          href: "/services/specialized-wellness",
-          image: IMAGES.coachHero.src,
-          imageAlt: "Specialized Wellness Programs",
-          label: "Specialized Wellness Programs",
-        },
-      ]}
+  {
+    href: "/services/metabolic-weight",
+    image: IMAGES.serviceMetabolic.src,
+    imageAlt: "Metabolic & Weight Optimization",
+    label: "Metabolic & Weight Optimization",
+  },
+
+  {
+    href: "/services/longevity-performance",
+    image: IMAGES.serviceLongevity.src,
+    imageAlt: "Longevity & Performance Medicine",
+    label: "Longevity & Performance Medicine",
+  },
+  {
+    href: "/services/aesthetics-skin",
+    image: IMAGES.serviceAestheticSkin.src,
+    imageAlt: "Aesthetic & Skin Medicine",
+    label: "Aesthetic & Skin Medicine",
+  },
+  {
+    href: "/services/post-surgical-recovery",
+    image: IMAGES.servicePostSurgical.src,
+    imageAlt: "Post-Surgical Recovery & Wound Healing",
+    label: "Post-Surgical Recovery & Wound Healing",
+  },
+  {
+    href: "/services/wellness-specialized",
+    image: IMAGES.serviceAssessment.src,
+    imageAlt: "Specialized Wellness Programs",
+    label: "Specialized Wellness Programs",
+  },
+]}
     />
   );
 }

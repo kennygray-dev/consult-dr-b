@@ -8,20 +8,6 @@ import Reveal from "@/components/ui/Reveal";
 
 const SERVICES = [
   {
-    href: "/services/longevity-performance",
-    image: IMAGES.serviceLongevity.src,
-    imageAlt: "Longevity & Performance Medicine",
-    title: "Longevity & Performance Medicine",
-    tags: ["Anti-aging protocols", "Hormone optimisation", "Long-term health planning"],
-  },
-  {
-    href: "/services/aesthetics-skin",
-    image: IMAGES.serviceAssessment.src,
-    imageAlt: "Aesthetic & Skin Medicine",
-    title: "Aesthetic & Skin Medicine",
-    tags: ["Skin rejuvenation", "Advanced aesthetics", "Medical-grade treatments"],
-  },
-  {
     href: "/services/metabolic-weight",
     image: IMAGES.serviceMetabolic.src,
     imageAlt: "Metabolic & Weight Optimization",
@@ -29,25 +15,39 @@ const SERVICES = [
     tags: ["GLP therapies", "Body composition", "Metabolic reset"],
   },
   {
+    href: "/services/longevity-performance",
+    image: IMAGES.serviceLongevity.src,
+    imageAlt: "Advanced Longevity & Performance Medicine",
+    title: "Advanced Longevity & Performance Medicine",
+    tags: ["Anti-aging protocols", "Hormone optimisation", "Long-term health planning"],
+  },
+  {
+    href: "/services/wellness-specialized",
+    image: IMAGES.serviceAssessment.src,
+    imageAlt: "Wellness & Specialized Care",
+    title: "Wellness & Specialized Care",
+    tags: ["Preventive care", "Holistic optimisation", "Lifestyle medicine"],
+  },
+  {
     href: "/services/regenerative-cellular",
-    image: IMAGES.peptideHero.src,
+    image: IMAGES.serviceHormone.src,
     imageAlt: "Regenerative & Cellular Medicine",
     title: "Regenerative & Cellular Medicine",
-    tags: ["Peptide protocols", "Cellular repair", "Post-surgical recovery"],
+    tags: ["Peptide protocols", "Cellular repair", "Bioregeneration"],
   },
   {
-    href: "/services/diagnostics-testing",
-    image: IMAGES.serviceAssessment.src,
-    imageAlt: "Advanced Diagnostics & Testing",
-    title: "Advanced Diagnostics & Testing",
-    tags: ["Biomarker analysis", "Functional testing", "Precision diagnostics"],
+    href: "/services/aesthetics-skin",
+    image: IMAGES.serviceAestheticSkin.src,
+    imageAlt: "Aesthetic & Skin Medicine",
+    title: "Aesthetic & Skin Medicine",
+    tags: ["Skin rejuvenation", "Advanced aesthetics", "Medical-grade treatments"],
   },
   {
-    href: "/services/mental-performance",
-    image: IMAGES.servicesHero.src,
-    imageAlt: "Mental Performance & Wellbeing",
-    title: "Mental Performance & Wellbeing",
-    tags: ["Cognitive optimisation", "Stress resilience", "Sleep & recovery"],
+    href: "/services/post-surgical-recovery",
+    image: IMAGES.servicePostSurgical.src,
+    imageAlt: "Post-Surgical Recovery & Wound Healing",
+    title: "Post-Surgical Recovery & Wound Healing",
+    tags: ["Healing support", "Recovery optimisation", "Clinical rehabilitation"],
   },
 ];
 

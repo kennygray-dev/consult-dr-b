@@ -12,15 +12,15 @@ export default function PostSurgicalRecoveryPage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-      hero={{
-        eyebrow: "Post-Surgical Recovery & Wound Healing",
-        title: "Accelerate Your Recovery",
-        subtitle:
-          "Physician-led care designed to accelerate healing, reduce complications, and optimise both functional and aesthetic recovery.",
-        image: IMAGES.servicesHero.src,
-        imageAlt: IMAGES.servicesHero.alt,
-        blurDataURL: IMAGES.servicesHero.blurDataURL,
-      }}
+    hero={{
+  eyebrow: "Post-Surgical Recovery & Wound Healing",
+  title: "Accelerate Your Recovery",
+  subtitle:
+    "Physician-led care designed to accelerate healing, reduce complications, and optimise both functional and aesthetic recovery.",
+  image: IMAGES.servicePostSurgicalHero.src,
+  imageAlt: IMAGES.servicePostSurgicalHero.alt,
+  blurDataURL: IMAGES.servicePostSurgicalHero.blurDataURL,
+}}
 
       // ── Approach ──────────────────────────────────────────────────────
       approach={{
@@ -29,9 +29,9 @@ export default function PostSurgicalRecoveryPage() {
           "This program is designed to support faster, safer, and more complete recovery after surgery. At Consult Dr B, we combine regenerative therapies, advanced wound care, and personalised medical oversight to enhance healing, minimise complications, and improve overall outcomes.",
         ],
         ctaText: "Book a Recovery Consultation",
-        image: IMAGES.servicesHero.src,
-        imageAlt: IMAGES.servicesHero.alt,
-        blurDataURL: IMAGES.servicesHero.blurDataURL,
+        image: IMAGES.servicePostSurgical.src,
+        imageAlt: IMAGES.servicePostSurgical.alt,
+        blurDataURL: IMAGES.servicePostSurgical.blurDataURL,
       }}
 
       // ── Conditions ────────────────────────────────────────────────────
@@ -45,8 +45,8 @@ export default function PostSurgicalRecoveryPage() {
           "Have delayed healing or metabolic challenges",
           "Require structured post-surgical support",
         ],
-        backgroundImage: IMAGES.servicesHero.src,
-        backgroundImageAlt: IMAGES.servicesHero.alt,
+        backgroundImage: IMAGES.servicePostSurgicalHero.src,
+        backgroundImageAlt: IMAGES.servicePostSurgical.alt,
       }}
 
       // ── Programs Grid ─────────────────────────────────────────────────
@@ -54,43 +54,43 @@ export default function PostSurgicalRecoveryPage() {
         sectionTitle: "Comprehensive Recovery Programs",
         cards: [
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical1.png",
             imageAlt: "Regenerative Therapies",
             title: "Regenerative Therapies",
             desc: "PRP, peptide protocols, and cellular repair support.",
           },
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical2.png",
             imageAlt: "Advanced Wound Care",
             title: "Advanced Wound Care",
             desc: "Medical dressings, infection prevention, and healing support.",
           },
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical33.png",
             imageAlt: "IV Recovery Therapy",
             title: "IV Recovery Therapy",
             desc: "Targeted infusions to support immunity, and recovery.",
           },
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical44.png",
             imageAlt: "Nutritional & Nutritional Support",
             title: "Nutritional & Nutritional Support",
             desc: "Optimise nutrition and micronutrients for healing.",
           },
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical55.png",
             imageAlt: "Scar Minimisation",
             title: "Scar Minimisation",
             desc: "Treatments to improve recovery skin texture and minimise scarring.",
           },
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical66.png",
             imageAlt: "Rehabilitation Support",
             title: "Rehabilitation Support",
             desc: "Mobility, lymphatic drainage, and recovery therapies.",
           },
           {
-            image: IMAGES.servicesHero.src,
+            image: "/post-surgical77.png",
             imageAlt: "Concierge Monitoring",
             title: "Concierge Monitoring",
             desc: "Dedicated physician oversight with regular reviews.",
@@ -119,7 +119,7 @@ export default function PostSurgicalRecoveryPage() {
             desc: "Continuous physician oversight and progress tracking.",
           },
         ],
-        backgroundImage: IMAGES.programsHero.src,
+        backgroundImage: "/personalized-post-surgical.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
@@ -164,7 +164,7 @@ export default function PostSurgicalRecoveryPage() {
         },
         {
           href: "/services/regenerative-cellular",
-          image: IMAGES.peptideHero.src,
+          image: IMAGES.serviceHormone.src,
           imageAlt: "Regenerative & Cellular Medicine",
           label: "Regenerative & Cellular Medicine",
         },
@@ -176,13 +176,13 @@ export default function PostSurgicalRecoveryPage() {
         },
         {
           href: "/services/aesthetics-skin",
-          image: IMAGES.serviceAssessment.src,
+          image: IMAGES.serviceAestheticSkin.src,
           imageAlt: "Aesthetic & Skin Medicine",
           label: "Aesthetic & Skin Medicine",
         },
-        {
-          href: "/services/specialized-wellness",
-          image: IMAGES.coachHero.src,
+         {
+          href: "/services/wellness-specialized",
+          image: IMAGES.serviceAssessment.src,
           imageAlt: "Specialized Wellness Programs",
           label: "Specialized Wellness Programs",
         },

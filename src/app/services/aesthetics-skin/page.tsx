@@ -12,15 +12,15 @@ export default function AestheticsSkinPage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-      hero={{
-        eyebrow: "Aesthetic & Skin Medicine",
-        title: "Enhance Your Natural Appearance",
-        subtitle:
-          "Clinically guided aesthetic treatments designed to support skin health, restore confidence, and enhance natural appearance through advanced medical care.",
-        image: IMAGES.serviceAssessment.src,
-        imageAlt: IMAGES.serviceAssessment.alt,
-        blurDataURL: IMAGES.serviceAssessment.blurDataURL,
-      }}
+     hero={{
+  eyebrow: "Aesthetic & Skin Medicine",
+  title: "Enhance Your Natural Appearance",
+  subtitle:
+    "Clinically guided aesthetic treatments designed to support skin health, restore confidence, and enhance natural appearance through advanced medical care.",
+  image: IMAGES.serviceAestheticSkinHero.src,
+  imageAlt: IMAGES.serviceAestheticSkinHero.alt,
+  blurDataURL: IMAGES.serviceAestheticSkinHero.blurDataURL,
+}}
 
       // ── Approach ──────────────────────────────────────────────────────
       approach={{
@@ -30,9 +30,9 @@ export default function AestheticsSkinPage() {
           "Each treatment plan is personalised, ensuring outcomes that align with your individual features and goals.",
         ],
         ctaText: "Book an Aesthetic Consultation",
-        image: IMAGES.serviceAssessment.src,
-        imageAlt: IMAGES.serviceAssessment.alt,
-        blurDataURL: IMAGES.serviceAssessment.blurDataURL,
+        image: IMAGES.serviceAestheticSkin.src,
+        imageAlt: IMAGES.serviceAestheticSkin.alt,
+        blurDataURL: IMAGES.serviceAestheticSkin.blurDataURL,
       }}
 
       // ── Conditions ────────────────────────────────────────────────────
@@ -46,8 +46,8 @@ export default function AestheticsSkinPage() {
           "Skin health and maintenance",
           "Confidence in physical appearance",
         ],
-        backgroundImage: IMAGES.serviceAssessment.src,
-        backgroundImageAlt: IMAGES.serviceAssessment.alt,
+        backgroundImage: IMAGES.serviceAestheticSkinHero.src,
+        backgroundImageAlt: IMAGES.serviceAestheticSkin.alt,
       }}
 
       // ── Programs Grid ─────────────────────────────────────────────────
@@ -55,25 +55,25 @@ export default function AestheticsSkinPage() {
         sectionTitle: "Designed for Natural, Lasting Results",
         cards: [
           {
-            image: IMAGES.serviceAssessment.src,
+            image: "/aesthetic1.png",
             imageAlt: "Beauty & Skin Health Programs",
             title: "Beauty & Skin Health Programs",
             desc: "Personalised treatments designed to maintain and improve overall skin health.",
           },
           {
-            image: IMAGES.serviceAssessment.src,
+            image: "/aesthetic2.png",
             imageAlt: "Body Sculpting",
             title: "Body Sculpting",
             desc: "Clinically guided procedures focused on enhancing body contour and shape.",
           },
           {
-            image: IMAGES.serviceAssessment.src,
+            image: "/aesthetic3.png",
             imageAlt: "Advanced Skin Therapies",
             title: "Advanced Skin Therapies",
             desc: "Targeted treatments designed to improve skin texture, tone, and appearance.",
           },
           {
-            image: IMAGES.serviceAssessment.src,
+            image: "/aesthetic4.png",
             imageAlt: "Medical Aesthetic Devices",
             title: "Medical Aesthetic Devices",
             desc: "Use of advanced technologies to support skin rejuvenation and non-invasive enhancements.",
@@ -102,7 +102,7 @@ export default function AestheticsSkinPage() {
             desc: "Continued support to maintain and enhance results over time.",
           },
         ],
-        backgroundImage: IMAGES.programsHero.src,
+        backgroundImage: '/personalized-aesthetic.png',
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
@@ -147,7 +147,7 @@ export default function AestheticsSkinPage() {
         },
         {
           href: "/services/regenerative-cellular",
-          image: IMAGES.peptideHero.src,
+          image: IMAGES.serviceHormone.src,
           imageAlt: "Regenerative & Cellular Medicine",
           label: "Regenerative & Cellular Medicine",
         },
@@ -159,13 +159,13 @@ export default function AestheticsSkinPage() {
         },
         {
           href: "/services/post-surgical-recovery",
-          image: IMAGES.servicesHero.src,
+          image: IMAGES.servicePostSurgical.src,
           imageAlt: "Post-Surgical Recovery & Wound Healing",
           label: "Post-Surgical Recovery & Wound Healing",
         },
         {
-          href: "/services/specialized-wellness",
-          image: IMAGES.coachHero.src,
+          href: "/services/wellness-specialized",
+          image: IMAGES.serviceAssessment.src,
           imageAlt: "Specialized Wellness Programs",
           label: "Specialized Wellness Programs",
         },

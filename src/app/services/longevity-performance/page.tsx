@@ -11,15 +11,15 @@ export default function LongevityPerformancePage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-      hero={{
-        eyebrow: "Longevity & Performance Medicine",
-        title: "Optimizing Health for Long-Term Performance",
-        subtitle:
-          "Precision health programs designed to optimize cellular function, enhance performance, and extend long-term vitality through advanced, physician-led care.",
-        image: IMAGES.serviceLongevity.src,
-        imageAlt: IMAGES.serviceLongevity.alt,
-        blurDataURL: IMAGES.serviceLongevity.blurDataURL,
-      }}
+    hero={{
+  eyebrow: "Longevity & Performance Medicine",
+  title: "Optimizing Health for Long-Term Performance",
+  subtitle:
+    "Precision health programs designed to optimize cellular function, enhance performance, and extend long-term vitality through advanced, physician-led care.",
+  image: IMAGES.serviceLongevityHero.src,
+  imageAlt: IMAGES.serviceLongevityHero.alt,
+  blurDataURL: IMAGES.serviceLongevityHero.blurDataURL,
+}}
 
       // ── Approach ──────────────────────────────────────────────────────
       approach={{
@@ -48,8 +48,8 @@ export default function LongevityPerformancePage() {
           "Long-term health and aging processes",
         ],
         // 🔁 Replace with your own image when ready
-        backgroundImage: IMAGES.serviceLongevity.src,
-        backgroundImageAlt: IMAGES.serviceLongevity.alt,
+        backgroundImage: IMAGES.serviceLongevityHero.src,
+        backgroundImageAlt: IMAGES.serviceLongevityHero.alt,
       }}
 
       // ── Programs Grid ─────────────────────────────────────────────────
@@ -57,37 +57,37 @@ export default function LongevityPerformancePage() {
         sectionTitle: "Programs Within Longevity & Performance Medicine",
         cards: [
           {
-            image: IMAGES.serviceLongevity.src,
+            image: "/longevity1.png",
             imageAlt: "NAD+ Cellular Restoration Therapy",
             title: "NAD+ Cellular Restoration Therapy",
             desc: "Advanced therapy designed to support cellular repair, increase energy production, and enhance overall vitality.",
           },
           {
-            image: IMAGES.serviceLongevity.src,
+            image: "/longevity2.png",
             imageAlt: "Mitochondrial & Cellular Energy Optimisation",
             title: "Mitochondrial & Cellular Energy Optimisation",
             desc: "Targeted protocols focused on improving how your cells produce and use energy.",
           },
           {
-            image: IMAGES.serviceLongevity.src,
+            image: "/longevity3.png",
             imageAlt: "Precision Hormone Optimisation",
             title: "Precision Hormone Optimisation",
             desc: "Clinically guided programs designed to restore hormonal balance and support physical performance and wellbeing.",
           },
           {
-            image: IMAGES.serviceLongevity.src,
+            image: "/longevity4.png",
             imageAlt: "Advanced Longevity Protocols",
             title: "Advanced Longevity Protocols",
             desc: "Personalised strategies aimed at improving long-term health outcomes and slowing aging processes.",
           },
           {
-            image: IMAGES.serviceLongevity.src,
+            image: "/longevity5.png",
             imageAlt: "Metabolic Reset & Anti-Aging Programs",
             title: "Metabolic Reset & Anti-Aging Programs",
             desc: "Structured programs to improve metabolic efficiency and support healthy metabolic aging.",
           },
           {
-            image: IMAGES.serviceLongevity.src,
+            image: "/longevity6.png",
             imageAlt: "Executive Health Optimisation Programs",
             title: "Executive Health Optimisation Programs",
             desc: "Comprehensive, high-value programs designed for individuals seeking peak performance and long-term vitality.",
@@ -117,7 +117,7 @@ export default function LongevityPerformancePage() {
           },
         ],
         // 🔁 Replace with your own image when ready
-        backgroundImage: IMAGES.programsHero.src,
+        backgroundImage: "/personalized-longevity.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
@@ -154,38 +154,38 @@ export default function LongevityPerformancePage() {
       }}
 
       // ── Related Services ──────────────────────────────────────────────
-      relatedServices={[
-        {
-          href: "/services/metabolic-weight",
-          image: IMAGES.serviceMetabolic.src,
-          imageAlt: "Metabolic & Weight Optimization",
-          label: "Metabolic & Weight Optimization",
-        },
-        {
-          href: "/services/regenerative-cellular",
-          image: IMAGES.peptideHero.src,
-          imageAlt: "Regenerative & Cellular Medicine",
-          label: "Regenerative & Cellular Medicine",
-        },
-        {
-          href: "/services/aesthetics-skin",
-          image: IMAGES.serviceAssessment.src,
-          imageAlt: "Aesthetic & Skin Medicine",
-          label: "Aesthetic & Skin Medicine",
-        },
-        {
-          href: "/services/post-surgical-recovery",
-          image: IMAGES.servicesHero.src,
-          imageAlt: "Post-Surgical Recovery & Wound Healing",
-          label: "Post-Surgical Recovery & Wound Healing",
-        },
-        {
-          href: "/services/specialized-wellness",
-          image: IMAGES.coachHero.src,
-          imageAlt: "Specialized Wellness Programs",
-          label: "Specialized Wellness Programs",
-        },
-      ]}
+       relatedServices={[
+  {
+    href: "/services/metabolic-weight",
+    image: IMAGES.serviceMetabolic.src,
+    imageAlt: "Metabolic & Weight Optimization",
+    label: "Metabolic & Weight Optimization",
+  },
+  {
+    href: "/services/regenerative-cellular",
+    image: IMAGES.serviceHormone.src,
+    imageAlt: "Regenerative & Cellular Medicine",
+    label: "Regenerative & Cellular Medicine",
+  },
+  {
+    href: "/services/aesthetics-skin",
+    image: IMAGES.serviceAestheticSkin.src,
+    imageAlt: "Aesthetic & Skin Medicine",
+    label: "Aesthetic & Skin Medicine",
+  },
+  {
+    href: "/services/post-surgical-recovery",
+    image: IMAGES.servicePostSurgical.src,
+    imageAlt: "Post-Surgical Recovery & Wound Healing",
+    label: "Post-Surgical Recovery & Wound Healing",
+  },
+  {
+    href: "/services/wellness-specialized",
+    image: IMAGES.serviceAssessment.src,
+    imageAlt: "Specialized Wellness Programs",
+    label: "Specialized Wellness Programs",
+  },
+]}
     />
   );
 }

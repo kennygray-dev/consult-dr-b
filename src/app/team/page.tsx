@@ -40,7 +40,7 @@ export default function TeamPage() {
         eyebrow="Our Team"
         title="The Experts Behind Your Care"
         subtitle="A multidisciplinary team of physicians, scientists, coaches, and nutritionists — united by a single mission."
-        image="/team.png"
+        image="/aboutpageteam.png"
         imageAlt="Consult Dr B team"
       />
 
