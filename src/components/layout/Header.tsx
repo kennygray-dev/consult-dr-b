@@ -94,53 +94,57 @@ export default function Header() {
 
                   {/* ── Dropdown Panel ── */}
                   {openDropdown === link.label && (
-                    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                      {/* Arrow pointer */}
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45 z-10" />
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
 
+                      {/* Modern dropdown container */}
                       <div
-                        className="relative bg-white border border-gray-100 shadow-[0_20px_60px_rgba(0,0,0,0.12)] overflow-hidden"
-                        style={{ width: link.children.length > 4 ? "580px" : "320px" }}
+                        className="relative w-[520px] rounded-2xl bg-white/90 backdrop-blur-xl border border-black/5 shadow-xl overflow-hidden"
                       >
+
                         {/* Top accent line */}
-                        <div className="h-0.5 bg-gradient-to-r from-secondary/60 via-secondary to-secondary/60" />
+                        <div className="h-1 bg-gradient-to-r from-secondary/40 via-secondary to-secondary/40" />
 
-                        <div className="p-5">
-                          {/* Section label */}
-                          <div className="mb-4 pb-3 border-b border-gray-50">
-                            <span className="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-medium">
-                              {link.label}
-                            </span>
-                          </div>
+                        {/* Header */}
+                        <div className="px-6 pt-5 pb-3 border-b border-black/5">
+                          <span className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-medium">
+                            {link.label}
+                          </span>
+                        </div>
 
-                          {/* Items */}
-                          <div className={cn(
-                            "grid gap-1",
-                            link.children.length > 4 ? "grid-cols-2" : "grid-cols-1"
-                          )}>
-                            {link.children.map((child) => (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                onClick={() => setOpenDropdown(null)}
+                        {/* Items grid */}
+                        <div className={cn(
+                          "p-4 grid gap-2",
+                          link.children.length > 4 ? "grid-cols-2" : "grid-cols-1"
+                        )}>
+
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              onClick={() => setOpenDropdown(null)}
+                              className={cn(
+                                "group flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 border border-transparent",
+                                isActive(child.href)
+                                  ? "bg-secondary/10 text-secondary border-secondary/20"
+                                  : "hover:bg-gray-50 hover:border-gray-100 text-gray-700"
+                              )}
+                            >
+                              {/* Left content */}
+                              <span className="text-sm font-medium">
+                                {child.label}
+                              </span>
+
+                              {/* Arrow */}
+                              <ArrowRight
+                                size={13}
                                 className={cn(
-                                  "group/item flex items-center justify-between px-3 py-2.5 transition-all duration-150",
-                                  isActive(child.href)
-                                    ? "bg-secondary/5 text-secondary"
-                                    : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                                  "transition-all duration-200 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0",
+                                  isActive(child.href) ? "opacity-100 translate-x-0 text-secondary" : "text-gray-400"
                                 )}
-                              >
-                                <span className="text-sm font-medium">{child.label}</span>
-                                <ArrowRight
-                                  size={12}
-                                  className={cn(
-                                    "shrink-0 transition-all duration-150 -translate-x-1 opacity-0 group-hover/item:translate-x-0 group-hover/item:opacity-100",
-                                    isActive(child.href) ? "opacity-100 translate-x-0 text-secondary" : "text-gray-400"
-                                  )}
-                                />
-                              </Link>
-                            ))}
-                          </div>
+                              />
+                            </Link>
+                          ))}
+
                         </div>
                       </div>
                     </div>

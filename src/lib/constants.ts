@@ -17,8 +17,9 @@ export const NAV_LINKS: NavLink[] = [
     label: "Programs",
     href: "/programs",
     children: [
-      { label: "Nutrition", href: "/nutrition" },
-      { label: "Peptide", href: "/peptide" },
+      { label: "Executive Performance & Precision Fitness", href: "/programs/executive-performance" },
+      { label: "Elite Aesthetic Medical Partner Program", href: "/programs/elite-aesthetic-medical-partner-program" },
+      { label: "Signature Peptide Bioregulation System", href: "/programs/signature-peptide-bioregulation-system" },
     ],
   },
   { label: "About Us", href: "/about" },

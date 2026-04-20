@@ -11,29 +11,17 @@ export const metadata: Metadata = {
 
 const TEAM = [
   { name: "Dr. Adeayo T.Y", role: "MD", credentials: "Russia 🇷🇺 / Nigeria 🇳🇬", bio: "", image: { src: "/adeayo.png", alt: "Dr. Adeayo T.Y portrait" } },
-
   { name: "Dr. Ruqayyah Ibrahim", role: "MD", credentials: "UAE 🇦🇪 / Great Britain 🇬🇧 / Nigeria 🇳🇬", bio: "", image: { src: "/ruqayyah.png", alt: "Dr. Ruqayyah Ibrahim portrait" } },
-
   { name: "Dr. Imaiker Theresa J", role: "MD (Consultant Endocrinologist - International)", credentials: "Russia 🇷🇺", bio: "", image: { src: "/imaiker.png", alt: "Dr. Imaiker Theresa J portrait" } },
-
   { name: "Dr. Gideon Botchey", role: "MD", credentials: "Russia 🇷🇺 / Ghana 🇬🇭", bio: "", image: { src: "/gideon.png", alt: "Dr. Gideon Botchey portrait" } },
-
   { name: "Dr. Abieyuwa Oshodin", role: "MBBS / MD", credentials: "Nigeria 🇳🇬", bio: "", image: { src: "/abieyuwa.jpg", alt: "Dr. Abieyuwa Oshodin portrait" } },
-
   { name: "Dr. Lobeswaran", role: "MD", credentials: "Russia 🇷🇺 / India 🇮🇳", bio: "", image: { src: "/lobeswaran.jpg", alt: "Dr. Lobeswaran portrait" } },
-
   { name: "Dr. Iyanuolu Stella D. E", role: "MBChB / MD", credentials: "Ghana 🇬🇭 / Nigeria 🇳🇬", bio: "", image: { src: "/stella.png", alt: "Dr. Iyanuolu Stella D. E portrait" } },
-
   { name: "Dr. Akshaya Sharma", role: "MD", credentials: "Russia 🇷🇺 / India 🇮🇳", bio: "", image: { src: "/akshaya.png", alt: "Dr. Akshaya Sharma portrait" } },
-
   { name: "Dr. Karam Rashid", role: "MBBS / MD - Mental Health and Counseling Specialist", credentials: "Saudi Arabia 🇸🇦 / Russia 🇷🇺", bio: "", image: { src: "/karam.png", alt: "Dr. Karam Rashid portrait" } },
-
   { name: "Dr. Pearl Manu", role: "Medical Officer - GP", credentials: "Russia 🇷🇺 / Ghana 🇬🇭", bio: "", image: { src: "/pearl.png", alt: "Dr. Pearl Manu portrait" } },
-
   { name: "Dr. Goodman Idigiri", role: "MD", credentials: "Ukraine 🇺🇦 / Great Britain 🇬🇧 / Nigeria 🇳🇬", bio: "", image: { src: "/goodman.png", alt: "Dr. Goodman Idigiri portrait" } },
-
   { name: "Dr. Owen Michael Irowa", role: "MD - Medical Performance and Body Optimization Physician", credentials: "Nigeria 🇳🇬 / USA 🇺🇸", bio: "", image: { src: "/owen.png", alt: "Dr. Owen Michael Irowa portrait" } },
-
   { name: "Dr. Bashirat Hassan Olamide", role: "MD (Founder, Consult Dr B)", credentials: "Russia 🇷🇺 / Nigeria 🇳🇬", bio: "", image: { src: "/bashirat.png", alt: "Dr. Bashirat Hassan Olamide portrait" } },
 ];
 
@@ -70,8 +58,8 @@ export default function TeamPage() {
 
               return (
                 <Reveal key={member.name} delay={i * 0.05}>
-                  <div className={isFounder ? "lg:col-start-2 flex justify-center" : ""}>
-                    <div className="group overflow-hidden max-w-sm w-full rounded-2xl h-[32rem] flex flex-col bg-white/80 backdrop-blur-sm border border-white/40 ring-1 ring-white/20">
+                  <div className={isFounder ? "lg:col-span-3 flex justify-center" : ""}>
+                    <div className="group overflow-hidden max-w-sm w-full rounded-2xl h-[32rem] flex flex-col bg-white border border-black/10 shadow-sm">
                       <div className="relative flex-1 overflow-hidden">
                         <Image
                           src={member.image.src}
@@ -82,7 +70,7 @@ export default function TeamPage() {
                           className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
-                      <div className="p-6 space-y-3 text-center">
+                      <div className="p-6 space-y-3 text-center border-t border-black/10">
                         <div>
                           <h3 className="font-heading text-xl text-primary">{member.name}</h3>
                           <p className="text-secondary text-sm font-semibold">{member.role}</p>
@@ -106,7 +94,7 @@ export default function TeamPage() {
           </Reveal>
 
           <Reveal>
-            <div className="max-w-sm overflow-hidden mx-auto rounded-2xl h-[32rem] flex flex-col bg-white/80 backdrop-blur-sm border border-white/40 ring-1 ring-white/20">
+            <div className="group overflow-hidden max-w-sm w-full rounded-2xl h-[32rem] flex flex-col bg-white border border-black/10 shadow-sm">
               <div className="relative flex-1 overflow-hidden">
                 <Image
                   src={ADMIN.image.src}
@@ -115,7 +103,7 @@ export default function TeamPage() {
                   className="object-cover object-top"
                 />
               </div>
-              <div className="p-6 space-y-2">
+              <div className="p-6 space-y-2 border-t border-black/10">
                 <h3 className="font-heading text-xl text-primary">{ADMIN.name}</h3>
                 <p className="text-secondary text-sm font-semibold">{ADMIN.role}</p>
               </div>

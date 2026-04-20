@@ -5,20 +5,12 @@ import { ArrowRight } from "lucide-react";
 import { IMAGES } from "@/lib/images";
 import CTABanner from "@/components/sections/CTABanner";
 import ReadMoreClient from "@/components/ui/ReadMoreClient";
+import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title: "About Us",
   description: "Learn about Dr B, our philosophy, and the team behind Consult Dr B.",
 };
-
-const MILESTONES = [
-  { year: "2008", event: "Founded first integrative medicine practice" },
-  { year: "2012", event: "Published research on peptide therapy protocols" },
-  { year: "2015", event: "Expanded to full precision medicine suite" },
-  { year: "2018", event: "Launched corporate wellness partnership program" },
-  { year: "2022", event: "Opened state-of-the-art consulting facility" },
-  { year: "2024", event: "Reached 3,000+ transformed patients globally" },
-];
 
 const FULL_BIO = `Her interest in molecular science became evident early in her academic career. As a second-year medical student, Dr. Bashirat (Nigeria) alongside two of her excellent colleagues who are also currently part of the company's medical & management team in persons of Dr. Rachid (Lebanon) and Dr. Botchwey (Ghana) — the top of their classes — presented a research thesis summary in Crimea related to a prototype project involving DNA barcoding (ZYGMO) within the field of molecular biochemistry.
 
@@ -44,156 +36,211 @@ Through Consult Dr B, her mission is to help patients move beyond the limitation
 
 Dr. Bashirat believes that the future of medicine lies not only in treating disease, but in understanding the human body deeply enough to restore balance, optimize health, and unlock its natural capacity for healing.`;
 
+const FOUNDER_HIGHLIGHTS = [
+  {
+    stat: "Top 5%",
+    title: "Academic Excellence",
+    body: "Graduated among the top 5% of her class at Ryazan State Medical University, Russia — completing rigorous training across the full spectrum of preclinical and clinical disciplines.",
+  },
+  {
+    stat: "3",
+    title: "International Medical Licences",
+    body: "Holds recognized qualifications across three jurisdictions — U.S. equivalency as a First Professional Degree, recognition within the German medical system, and full licensure in Nigeria.",
+  },
+  {
+    stat: "ZYGMO",
+    title: "Molecular Research, Crimea",
+    body: "As a second-year student, presented a DNA barcoding thesis under Nobel Prize–winning immunologist Prof. Konstantin Efetov — an early foundation in molecular science and precision medicine.",
+  },
+  {
+    stat: "4 Yrs",
+    title: "Front-Line Clinical Practice",
+    body: "Spent four years working alongside physicians and surgeons in Nigeria — witnessing both the strengths and the limitations of conventional medicine firsthand.",
+  },
+  {
+    stat: "Root",
+    title: "Cause Medicine Philosophy",
+    body: "Driven by personal metabolic health challenges, she pursued nutritional science, cellular health, and regenerative medicine — recognizing that chronic disease begins long before it surfaces clinically.",
+  },
+  {
+    stat: "Today",
+    title: "Consult Dr B",
+    body: "Leads a physician-driven practice integrating precision medicine, metabolic health, regenerative therapeutics, and longevity science — helping patients move beyond symptom management toward optimized, sustainable health.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
-      {/* ── Logo hero ── */}
-      <section className="bg-[#F8F4EA] flex items-center justify-center py-40">
-        <Image
-          src="/logo2.png"
-          alt="Consult Doctor B"
-          width={340}
-          height={110}
-          className="object-contain"
-          priority
-        />
-      </section>
-{/* ── Founder section ── */}
-<section className="relative overflow-hidden">
-  {/* Background: team image with white overlay */}
-  <div className="absolute inset-0">
-    <Image
-      src="/aboutpageteam.png"
-      alt=""
-      fill
-      className="object-cover object-center"
-    />
-    <div className="absolute inset-0 bg-white/90" />
-  </div>
+      <Reveal>
+        {/* ── Logo hero ── */}
+        <section className="bg-[#F8F4EA] flex items-center justify-center py-40">
+          <Image
+            src="/logo2.png"
+            alt="Consult Doctor B"
+            width={340}
+            height={110}
+            className="object-contain"
+            priority
+          />
+        </section>
+      </Reveal>
 
-  <div className="relative z-10 section-container py-20 grid lg:grid-cols-2 gap-12 items-start">
-    {/* Left: image with gold border frame */}
-    <div className="relative flex justify-start">
-      <div className="absolute top-5 left-5 w-[80%] h-[92%] border border-secondary/40 rounded-xl z-0" />
-      <div className="relative w-[80%] aspect-[3/4] overflow-hidden rounded-xl z-10">
-        <Image
-          src="/bashirat.png"
-          alt="Dr. Bashirat Hassan Olamide"
-          fill
-          className="object-cover object-top"
-        />
-      </div>
-    </div>
-
-    {/* Right: text */}
-    <div className="space-y-5 pt-4">
-      <h2 className="font-heading text-2xl text-black">Our Founder</h2>
-      <p className="text-gray-600 text-sm leading-relaxed">
-        Dr. Bashirat Hassan Olamide, M.D., is a physician whose philosophy of medicine was shaped by a rare combination of academic distinction, scientific curiosity, personal experience, and international clinical exposure.
-      </p>
-      <p className="text-gray-600 text-sm leading-relaxed">
-        She graduated among the top 5% of her class from Ryazan State Medical University in Russia, completing rigorous medical training across the full spectrum of preclinical and clinical disciplines. Her qualifications hold international recognition, including U.S. equivalency as a First Professional Degree in Medicine, recognition of her medical degree within the German medical system, and full medical licensure in Nigeria.
-      </p>
-      <ReadMoreClient fullBio={FULL_BIO} />
-    </div>
-  </div>
-</section>
-
-      {/* ── Our Approach + Our Standard ── */}
-      <section className="py-20 bg-[#F8F4EA]">
-        <div className="section-container grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Our Approach */}
-          <div className="border border-gray-100 rounded-xl p-8 space-y-4 bg-white">
-            <div className="text-3xl">🛡️</div>
-            <h3 className="font-heading text-xl text-black">Our Approach</h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Every patient undergoes a detailed clinical evaluation, allowing us to design personalized, physician-guided programs tailored to their biology and goals.
-            </p>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              By integrating medicine, nutrition, and lifestyle optimization, we deliver care that is both clinically grounded and results-driven.
-            </p>
-          </div>
-
-          {/* Our Standard */}
-          <div className="border border-gray-100 rounded-xl p-8 space-y-4 bg-white">
-            <div className="text-3xl">🤝</div>
-            <h3 className="font-heading text-xl text-black">Our Standard</h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Our team is internationally trained and operates within globally recognized medical frameworks. Every program is delivered with a focus on precision, discretion, and clinical excellence.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Team section ── */}
-      <section className="bg-white py-20">
-        <div className="section-container grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: text */}
-          <div className="space-y-6">
-            <h2 className="font-heading text-3xl text-black">
-              Redefining Modern Medicine Through Precision Care
-            </h2>
-            <p className="text-gray-700 text-base leading-relaxed">
-              Consult Dr B is a physician-led medical practice focused on preventive, metabolic, cellular, and regenerative medicine. Our approach is centered on identifying and addressing the underlying drivers of disease, rather than simply managing symptoms.
-            </p>
-            <p className="text-gray-700 text-base leading-relaxed">
-              We combine clinical expertise, advanced diagnostics, and personalized treatment strategies to support long-term health, recovery, and performance.
-            </p>
-            <Link
-              href="/team"
-              className="inline-flex items-center gap-2 border border-secondary text-secondary px-6 py-2.5 text-sm hover:bg-secondary hover:text-white transition-all duration-200"
-            >
-              View Team Members <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          {/* Right: team image */}
-          <div className="relative aspect-[4/4] overflow-hidden rounded-xl">
+      <Reveal>
+        {/* ── Founder section ── */}
+        <section className="relative overflow-visible">
+          <div className="absolute inset-0">
             <Image
               src="/aboutpageteam.png"
-              alt="Consult Dr B Team"
+              alt=""
               fill
               className="object-cover object-center"
             />
+            <div className="absolute inset-0 bg-white/90" />
           </div>
-        </div>
-      </section>
 
-      {/* ── Milestones ── */}
-      <section className="py-24 bg-white">
-        <div className="section-container space-y-14">
-          <div className="text-center space-y-2">
-            <p className="text-secondary text-xs uppercase tracking-widest">Our Journey</p>
-            <h2 className="font-heading text-3xl text-black">Milestones That Matter</h2>
+          <div className="relative z-10 section-container py-20 grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: image with gold border frame */}
+            <div className="relative lg:sticky top-28 self-start flex justify-start">
+              <div className="absolute top-5 left-5 w-[80%] h-[92%] border border-secondary/40 rounded-xl z-0" />
+              <div className="relative w-[80%] aspect-[3/4] overflow-hidden rounded-xl z-10">
+                <Image
+                  src="/bashirat.png"
+                  alt="Dr. Bashirat Hassan Olamide"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+
+            {/* Right: text */}
+            <div className="space-y-5 pt-4 bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-black/5 shadow-sm">
+              <h2 className="font-heading text-2xl text-black">Our Founder</h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Dr. Bashirat Hassan Olamide, M.D., is a physician whose philosophy of medicine was shaped by a rare combination of academic distinction, scientific curiosity, personal experience, and international clinical exposure.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                She graduated among the top 5% of her class from Ryazan State Medical University in Russia, completing rigorous medical training across the full spectrum of preclinical and clinical disciplines. Her qualifications hold international recognition, including U.S. equivalency as a First Professional Degree in Medicine, recognition of her medical degree within the German medical system, and full medical licensure in Nigeria.
+              </p>
+              <ReadMoreClient fullBio={FULL_BIO} />
+            </div>
           </div>
-          <div className="relative max-w-3xl mx-auto">
-            <div className="absolute left-1/2 -translate-x-px h-full w-0.5 bg-secondary/20" />
-            <div className="space-y-10">
-              {MILESTONES.map((m, i) => (
-                <div key={m.year} className={`flex items-center gap-8 ${i % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}>
-                  <div className={`flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
-                    <span className="inline-block border border-secondary text-secondary text-xs px-3 py-1">
-                      {m.year}
-                    </span>
-                    <p className="mt-2 text-gray-600 text-sm">{m.event}</p>
-                  </div>
-                  <div className="w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm shrink-0 z-10" />
-                  <div className="flex-1" />
+        </section>
+      </Reveal>
+
+      <Reveal>
+        {/* ── Our Approach + Our Standard ── */}
+        <section className="py-20 bg-[#F8F4EA]">
+          <div className="section-container grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Our Approach */}
+            <div className="border border-gray-100 rounded-xl p-8 space-y-4 bg-white">
+              <Image
+                src="/icons/protection.png"
+                alt="Protection"
+                width={40}
+                height={40}
+              />
+              <h3 className="font-heading text-xl text-black">Our Approach</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Every patient undergoes a detailed clinical evaluation, allowing us to design personalized, physician-guided programs tailored to their biology and goals.
+              </p>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                By integrating medicine, nutrition, and lifestyle optimization, we deliver care that is both clinically grounded and results-driven.
+              </p>
+            </div>
+
+            {/* Our Standard */}
+            <div className="border border-gray-100 rounded-xl p-8 space-y-4 bg-white">
+              <Image
+                src="/icons/heartcare.png"
+                alt="Heart Care"
+                width={40}
+                height={40}
+              />
+              <h3 className="font-heading text-xl text-black">Our Standard</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Our team is internationally trained and operates within globally recognized medical frameworks. Every program is delivered with a focus on precision, discretion, and clinical excellence.
+              </p>
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        {/* ── Team section ── */}
+        <section className="bg-white py-20">
+          <div className="section-container grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: text */}
+            <div className="space-y-6">
+              <h2 className="font-heading text-3xl text-black">
+                Redefining Modern Medicine Through Precision Care
+              </h2>
+              <p className="text-gray-700 text-base leading-relaxed">
+                Consult Dr B is a physician-led medical practice focused on preventive, metabolic, cellular, and regenerative medicine. Our approach is centered on identifying and addressing the underlying drivers of disease, rather than simply managing symptoms.
+              </p>
+              <p className="text-gray-700 text-base leading-relaxed">
+                We combine clinical expertise, advanced diagnostics, and personalized treatment strategies to support long-term health, recovery, and performance.
+              </p>
+              <Link
+                href="/team"
+                className="inline-flex items-center gap-2 border border-secondary text-secondary px-6 py-2.5 text-sm hover:bg-secondary hover:text-white transition-all duration-200"
+              >
+                View Team Members <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* Right: team image */}
+            <div className="relative aspect-[4/4] overflow-hidden rounded-xl">
+              <Image
+                src="/aboutpageteam.png"
+                alt="Consult Dr B Team"
+                fill
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        {/* ── Founder Highlights ── */}
+        <section className="py-24 bg-[#FFFFFF]">
+          <div className="section-container space-y-10">
+            <div className="space-y-2">
+              <p className="text-secondary text-xs uppercase tracking-widest">Our Founder</p>
+              <h2 className="font-heading text-3xl text-black">A Career Built on Precision & Purpose</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 border border-secondary/20 divide-y md:divide-y-0 divide-secondary/20">
+              {FOUNDER_HIGHLIGHTS.map((item) => (
+                <div
+                  key={item.title}
+                  className="p-8 space-y-2 border-secondary/20 border hover:bg-[#f0e9d5] transition-colors duration-200"
+                >
+                  <p className="font-heading text-4xl text-secondary">{item.stat}</p>
+                  <p className="text-xs uppercase tracking-widest text-black font-medium">{item.title}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{item.body}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      <CTABanner
-        title="Start Your Personalized Health Journey"
-        subtitle="Our medical team is here to guide you through a personalized care plan designed to support long-term vitality and wellbeing."
-        buttonText="Contact Our Team"
-        buttonHref="/contact"
-        backgroundImage={IMAGES.servicesHero.src}
-        backgroundImageAlt={IMAGES.servicesHero.alt}
-      />
+            <blockquote className="border-l-2 border-secondary pl-6 font-heading text-xl italic text-gray-600 max-w-2xl">
+              "Medicine is not merely about treating disease — it is about unlocking the full potential of human health."
+            </blockquote>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <CTABanner
+          title="Start Your Personalized Health Journey"
+          subtitle="Our medical team is here to guide you through a personalized care plan designed to support long-term vitality and wellbeing."
+          buttonText="Contact Our Team"
+          buttonHref="/contact"
+          backgroundImage={IMAGES.servicesHero.src}
+          backgroundImageAlt={IMAGES.servicesHero.alt}
+        />
+      </Reveal>
     </>
   );
 }

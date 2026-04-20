@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 import { IMAGES } from "@/lib/images";
 import Reveal from "@/components/ui/Reveal";
 
@@ -51,6 +52,17 @@ const SERVICES = [
 ];
 
 export default function PersonalizedProgramsSection() {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const scrollAmount = 420; // width of one card
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="py-24" style={{ backgroundColor: "#F8F4EA" }}>
       <div className="section-container space-y-4">
@@ -68,36 +80,58 @@ export default function PersonalizedProgramsSection() {
         </div>
 
         {/* Horizontal scroll cards */}
-        <div className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
-          {SERVICES.map((svc, i) => (
-            <Reveal key={svc.href} delay={i * 0.08}>
-              <Link
-                href={svc.href}
-                className="group relative shrink-0 w-[420px] h-[440px] overflow-hidden snap-start block rounded-xl"
-              >
-                <Image
-                  src={svc.image}
-                  alt={svc.imageAlt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 space-y-3">
-                  <h3 className="font-heading text-white text-lg leading-snug">{svc.title}</h3>
-                  <div className="flex flex-wrap gap-1.5">
-                    {svc.tags.map((tag) => (
-                      <span key={tag} className="text-white/70 text-xs border border-white/20 px-2 py-0.5">
-                        {tag}
-                      </span>
-                    ))}
+        <div className="relative">
+
+          {/* Left button */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur-sm border border-black/10 rounded-full p-2 shadow-sm hover:bg-white transition"
+          >
+            <ChevronLeft size={18} />
+          </button>
+
+          {/* Right button */}
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur-sm border border-black/10 rounded-full p-2 shadow-sm hover:bg-white transition"
+          >
+            <ChevronRight size={18} />
+          </button>
+
+          <div
+            ref={scrollRef}
+            className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide"
+          >
+            {SERVICES.map((svc, i) => (
+              <Reveal key={svc.href} delay={i * 0.08}>
+                <Link
+                  href={svc.href}
+                  className="group relative shrink-0 w-[420px] h-[440px] overflow-hidden snap-start block rounded-xl"
+                >
+                  <Image
+                    src={svc.image}
+                    alt={svc.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 space-y-3">
+                    <h3 className="font-heading text-white text-lg leading-snug">{svc.title}</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {svc.tags.map((tag) => (
+                        <span key={tag} className="text-white/70 text-xs border border-white/20 px-2 py-0.5">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-white text-xs mt-1">
+                      Learn More <ArrowRight size={11} />
+                    </span>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-white text-xs mt-1">
-                    Learn More <ArrowRight size={11} />
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

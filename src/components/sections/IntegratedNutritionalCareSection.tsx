@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { IMAGES } from "@/lib/images";
 import Reveal from "@/components/ui/Reveal";
 
@@ -51,7 +50,7 @@ export default function IntegratedNutritionalCareSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {NUTRITION_CARDS.map((card, i) => (
             <Reveal key={card.title} delay={i * 0.08}>
-              <Link href="/nutrition" className="group flex rounded-2xl overflow-hidden">
+              <div className="group flex rounded-2xl overflow-hidden">
                 {/* Left — image, 50% */}
                 <div className="relative w-1/2 shrink-0 aspect-square">
                   <Image
@@ -76,7 +75,7 @@ export default function IntegratedNutritionalCareSection() {
     {card.desc}
   </p>
 </div>
-              </Link>
+              </div>
             </Reveal>
           ))}
         </div>

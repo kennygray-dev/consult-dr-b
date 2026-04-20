@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans, Cormorant_Infant, Poppins } from "next/font/
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen bg-white">{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

@@ -9,8 +9,14 @@ const SERVICES_LINKS = [
   { label: "Regenerative & Cellular",                   href: "/services/regenerative-cellular" },
   { label: "Advanced Longevity & Performance Medicine", href: "/services/longevity-performance" },
   { label: "Aesthetics & Skin",                         href: "/services/aesthetics-skin" },
-  { label: "Wellness & Specialized",                    href: "/services/wellness" },
-  { label: "Executive Performance & Precision Fitness", href: "/services/performance-fitness" },
+  { label: "Wellness & Specialized",                    href: "/services/wellness-specialized" },
+  { label: "Post-Surgical Recovery & Wound Healing",    href: "/services/post-surgical-recovery" },
+];
+
+const PROGRAMS_LINKS = [
+  { label: "Executive Performance & Precision Fitness", href: "/programs/executive-performance" },
+  { label: "Elite Aesthetic Medical Partner Program", href: "/programs/elite-aesthetic-medical-partner-program" },
+  { label: "Signature Peptide Bioregulation System", href: "/programs/signature-peptide-bioregulation-system" },
 ];
 
 const COMPANY_LINKS = [
@@ -33,14 +39,16 @@ export default function Footer() {
           <div className="flex flex-col justify-between gap-12">
             <div className="space-y-5">
               {/* Logo */}
-              <Image
-                src="/logo2.png"
-                alt={SITE_NAME}
-                width={150}
-                height={45}
-                className="object-contain"
-                priority
-              />
+              <Link href="/" className="inline-flex items-center">
+                <Image
+                  src="/logo2.png"
+                  alt={SITE_NAME}
+                  width={150}
+                  height={45}
+                  className="object-contain cursor-pointer"
+                  priority
+                />
+              </Link>
 
               {/* Locations */}
               <div className="flex flex-wrap items-center gap-y-1 text-sm text-black/55">
@@ -65,10 +73,10 @@ export default function Footer() {
                 Trusted laboratory partners
               </p>
               <div className="flex items-center gap-5 flex-wrap">
-                <div className="relative h-8 w-20">
+                <div className="relative h-14 w-32">
                   <Image src="/partners/synlab.png" alt="Synlab" fill className="object-contain object-left" />
                 </div>
-                <div className="relative h-10 w-28">
+                <div className="relative h-16 w-40">
                   <Image
                     src="/partners/aurum1.png"
                     alt="Aurum Concierge Medical"
@@ -76,7 +84,7 @@ export default function Footer() {
                     className="object-contain object-center"
                   />
                 </div>
-                <div className="relative h-12 w-24 border border-black/10 rounded p-1">
+                <div className="relative h-16 w-32 border border-black/10 rounded p-1">
                   <Image src="/partners/katchey.png" alt="Katchey" fill className="object-contain" />
                 </div>
               </div>
@@ -100,6 +108,24 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <div className="mt-8 space-y-4">
+              <h4 className="text-secondary font-normal text-base tracking-wide">
+                Programs
+              </h4>
+
+              <ul className="space-y-3.5">
+                {PROGRAMS_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-black/55 hover:text-secondary transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* ── Col 3: Company ── */}
