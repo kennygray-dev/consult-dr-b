@@ -12,11 +12,13 @@ export default function PostSurgicalRecoveryPage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-    hero={{
-  eyebrow: "Post-Surgical Recovery & Wound Healing",
-  title: "Accelerate Your Recovery",
+   hero={{
+  title:
+    "Post-Surgical Recovery & Wound Healing: Accelerate Your Recovery",
+
   subtitle:
     "Physician-led care designed to accelerate healing, reduce complications, and optimise both functional and aesthetic recovery.",
+
   image: IMAGES.servicePostSurgicalHero.src,
   imageAlt: IMAGES.servicePostSurgicalHero.alt,
   blurDataURL: IMAGES.servicePostSurgicalHero.blurDataURL,

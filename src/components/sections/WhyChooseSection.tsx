@@ -47,25 +47,54 @@ export default function WhyChooseSection() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
-  {WHY_US.map((item, i) => (
-    <Reveal key={item.title} delay={i * 0.1}>
-      <div className={`space-y-4 px-8 ${i !== 0 ? "border-l border-white/20" : ""}`}>
-        <div className="w-8 h-8 relative">
-          <Image
-            src={item.icon}
-            alt={item.title}
-            fill
-            className="object-contain invert"
-          />
-        </div>
-        <h3 className="font-heading text-white font-semibold">{item.title}</h3>
-        <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
-      </div>
-    </Reveal>
-  ))}
-</div>
+        {/* GRID */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+            sm:gap-0
+          "
+        >
+          {WHY_US.map((item, i) => (
+            <Reveal key={item.title} delay={i * 0.1}>
+              <div
+                className={`
+                  space-y-4
+                  px-6 sm:px-8
+                  py-6 sm:py-0
 
+                  /* MOBILE CARD STYLE */
+                  sm:border-l sm:border-white/20
+
+                  ${i !== 0 ? "border-t border-white/15 sm:border-t-0" : ""}
+                `}
+              >
+                {/* ICON */}
+                <div className="w-8 h-8 relative">
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    fill
+                    className="object-contain invert"
+                  />
+                </div>
+
+                {/* TITLE */}
+                <h3 className="font-heading text-white font-semibold">
+                  {item.title}
+                </h3>
+
+                {/* DESCRIPTION */}
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

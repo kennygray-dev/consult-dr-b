@@ -36,14 +36,11 @@ const ADMIN = {
 export default function TeamPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Our Team"
-        title="The Experts Behind Your Care"
-        subtitle="A multidisciplinary team of physicians, scientists, coaches, and nutritionists — united by a single mission."
-        image="/aboutpageteam.png"
-        imageAlt="Consult Dr B team"
-      />
-
+     <PageHero
+  title="Our Team"
+  image="/aboutpageteam.png"
+  imageAlt="Consult Dr B team"
+/>
       <section className="py-24 bg-white">
         <div className="section-container space-y-14">
           <Reveal>

@@ -11,11 +11,13 @@ export default function RegenerativeCellularPage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-      hero={{
-  eyebrow: "Regenerative & Cellular Medicine",
-  title: "Regenerative & Cellular Medicine",
+   hero={{
+  title:
+    "Regenerative & Cellular Medicine",
+
   subtitle:
     "Advanced therapies designed to support cellular repair, accelerate recovery, and restore the body's natural healing processes through physician-led precision care.",
+
   image: IMAGES.serviceHormoneHero.src,
   imageAlt: IMAGES.serviceHormoneHero.alt,
   blurDataURL: IMAGES.serviceHormoneHero.blurDataURL,

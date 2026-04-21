@@ -1,10 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import CTABanner from "@/components/sections/CTABanner";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// ─── Icon Imports (NEW) ───────────────────────────────
+const clarity = "/clarity.png";
+const growth = "/growth.png";
+const strategy = "/strategy.png";
+const support = "/support.png";
+const results = "/results.png";
+
+// ─── Types ────────────────────────────────────────────
 
 export interface ProgramSpecialist {
   name: string;
@@ -61,7 +68,7 @@ export interface ProgramPageProps {
   };
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
+// ─── Component ───────────────────────────────────────
 
 export default function ProgramPageTemplate({
   hero,
@@ -70,9 +77,13 @@ export default function ProgramPageTemplate({
   outcomes,
   cta,
 }: ProgramPageProps) {
+
+  // ICON MAP (NEW)
+  const outcomeIcons = [clarity, growth, strategy, support, results];
+
   return (
     <>
-      {/* ── Hero: split layout, no PageHero ── */}
+      {/* ── Hero ── */}
       <section className="bg-white py-16">
         <div className="section-container grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
@@ -85,6 +96,7 @@ export default function ProgramPageTemplate({
               </p>
             </div>
           </Reveal>
+
           <div className="relative aspect-[4/3] overflow-hidden rounded-none">
             <Image
               src={hero.image}
@@ -105,17 +117,27 @@ export default function ProgramPageTemplate({
               <h2 className="font-heading text-3xl text-black leading-tight">
                 {specialist.sectionTitle}
               </h2>
+
               <div className="space-y-1">
-                <p className="font-semibold text-gray-800 text-sm">{specialist.doctor.name}</p>
-                <p className="text-gray-500 text-sm">{specialist.doctor.role}</p>
+                <p className="font-semibold text-gray-800 text-sm">
+                  {specialist.doctor.name}
+                </p>
+                <p className="text-gray-500 text-sm">
+                  {specialist.doctor.role}
+                </p>
+
                 <ul className="mt-2 space-y-0.5">
                   {specialist.doctor.credentials.map((c) => (
-                    <li key={c} className="text-gray-500 text-sm before:content-['•'] before:mr-2 before:text-secondary">
+                    <li
+                      key={c}
+                      className="text-gray-500 text-sm before:content-['•'] before:mr-2 before:text-secondary"
+                    >
                       {c}
                     </li>
                   ))}
                 </ul>
               </div>
+
               <p className="text-gray-500 text-sm leading-relaxed">
                 {specialist.doctor.bio}
               </p>
@@ -133,8 +155,8 @@ export default function ProgramPageTemplate({
         </div>
       </section>
 
-      {/* ── What We Optimize (dark image bg) ── */}
-      <section className="relative py-24 overflow-hidden">
+      {/* ── What We Optimize ── */}
+      <section className="relative py-32 min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={optimization.backgroundImage}
@@ -152,14 +174,16 @@ export default function ProgramPageTemplate({
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
             {optimization.pillars.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 0.08}>
-                <div className="border border-white/20 bg-black/40 p-6 space-y-2 hover:border-secondary transition-colors duration-200">
+                <div className="h-full flex flex-col border border-white/20 bg-black/40 p-6 space-y-2 hover:border-secondary transition-colors duration-200">
                   <h3 className="font-heading text-white font-semibold text-base">
                     {pillar.title}
                   </h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{pillar.desc}</p>
+                  <p className="text-white/60 text-sm leading-relaxed flex-grow">
+                    {pillar.desc}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -167,12 +191,16 @@ export default function ProgramPageTemplate({
         </div>
       </section>
 
-      {/* ── What You Can Expect ── */}
+      {/* ── What You Can Expect (UPDATED) ── */}
       <section className="py-24 bg-[#F3F3F3]">
         <div className="section-container grid lg:grid-cols-2 gap-16 items-start">
+
           <Reveal>
             <div className="space-y-6">
-              <h2 className="font-heading text-3xl text-black">{outcomes.sectionTitle}</h2>
+              <h2 className="font-heading text-3xl text-black">
+                {outcomes.sectionTitle}
+              </h2>
+
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
                   src={outcomes.image}
@@ -187,19 +215,30 @@ export default function ProgramPageTemplate({
           <div className="space-y-3 pt-16">
             {outcomes.items.map((item, i) => (
               <Reveal key={item.label} delay={i * 0.08}>
-                <div className="flex items-center gap-4 bg-white border border-gray-100 px-6 py-4 rounded-xl shadow-sm">
-                  <div className="w-8 h-8 rounded-full border border-secondary/40 flex items-center justify-center shrink-0">
-                    <Check size={14} className="text-secondary" />
-                  </div>
-                  <p className="text-gray-700 text-sm">{item.label}</p>
+                <div className="flex items-center gap-4 bg-white border border-gray-100 px-6 py-6 min-h-[90px] rounded-xl shadow-sm">
+
+                  {/* ICON REPLACED */}
+                  <Image
+  src={outcomeIcons[i]}
+  alt={item.label}
+  width={40}
+  height={40}
+  className="object-contain"
+/>
+
+                  <p className="text-gray-700 text-sm">
+                    {item.label}
+                  </p>
+
                 </div>
               </Reveal>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ── CTA Banner ── */}
+      {/* ── CTA ── */}
       <CTABanner
         title={cta.title}
         subtitle={cta.subtitle}

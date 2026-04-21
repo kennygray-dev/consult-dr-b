@@ -12,10 +12,12 @@ export default function LongevityPerformancePage() {
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
     hero={{
-  eyebrow: "Longevity & Performance Medicine",
-  title: "Optimizing Health for Long-Term Performance",
+  title:
+    "Longevity & Performance Medicine — Optimizing Health for Long-Term Performance",
+
   subtitle:
     "Precision health programs designed to optimize cellular function, enhance performance, and extend long-term vitality through advanced, physician-led care.",
+
   image: IMAGES.serviceLongevityHero.src,
   imageAlt: IMAGES.serviceLongevityHero.alt,
   blurDataURL: IMAGES.serviceLongevityHero.blurDataURL,

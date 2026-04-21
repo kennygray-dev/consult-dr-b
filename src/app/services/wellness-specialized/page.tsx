@@ -12,11 +12,12 @@ export default function SpecializedWellnessPage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-      hero={{
-  eyebrow: "Specialized Wellness Programs",
-  title: "Comprehensive Wellness, Personalised for You",
+   hero={{
+  title: "Specialized Wellness Programs — Comprehensive Wellness, Personalised for You",
+
   subtitle:
     "Comprehensive, physician-guided programs designed to support specific health needs, lifestyle optimisation, and long-term wellbeing through personalised care.",
+
   image: IMAGES.serviceAssessmentHero.src,
   imageAlt: IMAGES.serviceAssessmentHero.alt,
   blurDataURL: IMAGES.serviceAssessmentHero.blurDataURL,

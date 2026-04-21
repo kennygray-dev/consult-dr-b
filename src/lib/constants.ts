@@ -33,12 +33,6 @@ export const CONTACT_INFO: ContactInfo = {
   hours:   "Mon – Fri: 8 AM – 6 PM",
 };
 
-export const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com", icon: "Instagram" },
-  { label: "Facebook",  href: "https://facebook.com",  icon: "Facebook" },
-  { label: "LinkedIn",  href: "https://linkedin.com",  icon: "Linkedin" },
-  { label: "YouTube",   href: "https://youtube.com",   icon: "Youtube" },
-];
 
 export const SITE_NAME    = "Consult Dr B";
 export const SITE_TAGLINE = "Precision Medicine. Personalised Care.";

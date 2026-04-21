@@ -12,11 +12,13 @@ export default function AestheticsSkinPage() {
   return (
     <ServicePageTemplate
       // ── Hero ──────────────────────────────────────────────────────────
-     hero={{
-  eyebrow: "Aesthetic & Skin Medicine",
-  title: "Enhance Your Natural Appearance",
+    hero={{
+  title:
+    "Aesthetic & Skin Medicine — Enhance Your Natural Appearance",
+
   subtitle:
     "Clinically guided aesthetic treatments designed to support skin health, restore confidence, and enhance natural appearance through advanced medical care.",
+
   image: IMAGES.serviceAestheticSkinHero.src,
   imageAlt: IMAGES.serviceAestheticSkinHero.alt,
   blurDataURL: IMAGES.serviceAestheticSkinHero.blurDataURL,

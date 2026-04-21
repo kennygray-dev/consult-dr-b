@@ -16,7 +16,7 @@ export default function ExecutivePerformancePage() {
         title: "Executive Performance & Precision Fitness",
         subtitle:
           "Physician-led training programs designed to optimize strength, body composition, and long-term physical performance through medically guided precision.",
-        image: IMAGES.servicesHero.src,
+        image: "/executive-hero1.jpg",
         imageAlt: "Executive Performance & Precision Fitness",
       }}
 
@@ -40,7 +40,7 @@ export default function ExecutivePerformancePage() {
       // ── What We Optimize ──────────────────────────────────────────────
       optimization={{
         sectionTitle: "What We Optimize",
-        backgroundImage: IMAGES.servicesHero.src,
+        backgroundImage: "/executive-hero1.jpg",
         backgroundImageAlt: "Training background",
         pillars: [
           {
@@ -69,7 +69,7 @@ export default function ExecutivePerformancePage() {
       // ── What You Can Expect ───────────────────────────────────────────
       outcomes={{
         sectionTitle: "What You Can Expect",
-        image: IMAGES.servicesHero.src,
+        image: IMAGES.serviceAestheticSkin.src,
         imageAlt: "Fitness training",
         items: [
           { label: "Improved strength and physical performance" },
@@ -87,7 +87,7 @@ export default function ExecutivePerformancePage() {
           "Experience a clinically guided approach to fitness designed for performance, precision, and long-term health.",
         buttonText: "Contact Our Team",
         buttonHref: "/contact",
-        backgroundImage: IMAGES.servicesHero.src,
+        backgroundImage: "/executive-gym.jpg",
         backgroundImageAlt: "Gym background",
       }}
     />

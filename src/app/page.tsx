@@ -1,7 +1,9 @@
 "use client";
-import { motion } from "framer-motion";import Link from "next/link";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { IMAGES } from "@/lib/images";
 
 import Reveal from "@/components/ui/Reveal";
@@ -15,7 +17,6 @@ import EliteAestheticMedicalPartnerSection from "@/components/sections/EliteAest
 import ExecutivePerformanceSection from "@/components/sections/ExecutivePerformanceSection";
 import FAQSection from "@/components/sections/FAQSection";
 import CTABanner from "@/components/sections/CTABanner";
-
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -55,45 +56,50 @@ export default function HomePage() {
           placeholder="blur"
           blurDataURL={IMAGES.homeHero.blurDataURL}
         />
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="section-container relative z-10 py-24">
+
+        {/* Reduced darkness */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        <div className="section-container relative z-10 py-16 sm:py-24">
           <motion.div
-            className="max-w-3xl space-y-8 text-center mx-auto flex flex-col items-center"
+            className="max-w-3xl space-y-6 sm:space-y-8 text-center mx-auto flex flex-col items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-heading text-5xl md:text-6xl text-white leading-snug">
+            {/* Optimized Heading */}
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl text-white leading-tight sm:leading-snug">
               Consult Dr B International<br />concierge Medical Services
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed max-w-xl mx-auto text-center font-light">
+
+            {/* Optimized Paragraph */}
+            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-md sm:max-w-xl mx-auto text-center font-light">
               Luxury medical care, research evidence-based<br />
               precision medicine, visible results
             </p>
+
+            {/* Optimized Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border border-white text-white bg-transparent hover:bg-white/10 px-6 py-3 rounded-md mx-auto"
+              className="inline-flex items-center justify-center border border-white text-white bg-transparent hover:bg-white/10 px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-md mx-auto"
             >
               Book Consultation <ArrowRight size={16} />
             </Link>
           </motion.div>
         </div>
       </section>
+
       <PrecisionMedicineSection />
-<MissionBannerSection />
-<PersonalizedProgramsSection />
-     <WhyChooseSection />
-<IntegratedNutritionalCareSection />
+      <MissionBannerSection />
+      <PersonalizedProgramsSection />
+      <WhyChooseSection />
+      <IntegratedNutritionalCareSection />
+      <PeptideBioregulationSection />
+      <EliteAestheticMedicalPartnerSection />
+      <ExecutivePerformanceSection />
 
-   <PeptideBioregulationSection />
-
-
-    <EliteAestheticMedicalPartnerSection />
-
-    <ExecutivePerformanceSection />
-
-      {/* ── About + FAQ ── */}
-      <section className="py-24" style={{ backgroundColor: "#FFFFFF" }}>
+      {/* ── FAQ ── */}
+      <section className="py-24 bg-white">
         <div className="section-container">
           <Reveal>
             <FAQSection items={FAQ_ITEMS} />
@@ -101,6 +107,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── CTA ── */}
       <CTABanner
         title="Start Your Personalized Health Journey"
         subtitle="Our medical team is here to guide you through a personalised care plan designed to support your health and everyday wellbeing."

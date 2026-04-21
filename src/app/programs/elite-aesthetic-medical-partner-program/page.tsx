@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { IMAGES } from "@/lib/images";
+import { cn } from "@/lib/utils";
 import Reveal from "@/components/ui/Reveal";
 import CTABanner from "@/components/sections/CTABanner";
 
@@ -68,7 +67,7 @@ export default function EliteAestheticPartnerPage() {
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-none bg-[#E8F0F8] flex items-center justify-center">
             <Image
-              src={IMAGES.serviceAssessment.src}
+              src="/elite-aesthetic-hero.png"
               alt="Elite Aesthetic Medical Partner Program"
               fill
               className="object-cover object-center"
@@ -96,7 +95,7 @@ export default function EliteAestheticPartnerPage() {
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src={IMAGES.servicesHero.src}
+              src="/physician-guided.png"
               alt="Physician-guided aesthetic care"
               fill
               className="object-cover object-center"
@@ -106,10 +105,10 @@ export default function EliteAestheticPartnerPage() {
       </section>
 
       {/* ── Clinical & Global Framework (dark bg) ── */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-32 min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src={IMAGES.servicesHero.src}
+            src="/our-clinical.jpg"
             alt="Clinical framework background"
             fill
             className="object-cover"
@@ -129,10 +128,17 @@ export default function EliteAestheticPartnerPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
             {FRAMEWORK_PILLARS.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 0.08}>
-                <div className={`space-y-4 px-8 py-6 ${i !== 0 ? "border-l border-white/20" : ""}`}>
+                <div
+  className={cn(
+    "space-y-4 px-6 py-8 lg:py-6",
+    "border-t border-white/15 lg:border-t-0",
+    i === 0 && "border-t-0",
+    i !== 0 && "lg:border-l lg:border-white/20"
+  )}
+>
                   <div className="w-8 h-8 relative">
                     <Image
                       src={pillar.icon}
@@ -185,7 +191,7 @@ export default function EliteAestheticPartnerPage() {
         subtitle="Partner with a physician-led network committed to raising the standard of aesthetic medicine."
         buttonText="Contact Our Team"
         buttonHref="/contact"
-        backgroundImage={IMAGES.servicesHero.src}
+        backgroundImage="/cta-aesthetic.jpg"
         backgroundImageAlt="Aesthetic medicine background"
       />
     </>

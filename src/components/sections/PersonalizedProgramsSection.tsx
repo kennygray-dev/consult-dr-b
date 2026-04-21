@@ -12,14 +12,14 @@ const SERVICES = [
     image: IMAGES.serviceMetabolic.src,
     imageAlt: "Metabolic & Weight Optimization",
     title: "Metabolic & Weight Optimization",
-    tags: ["GLP therapies", "Body composition", "Metabolic reset"],
+    tags: ["GLP Weight Management", "Body composition Management", "Medical Weight Loss", "Metabolic Health Optimization"],
   },
   {
     href: "/services/longevity-performance",
     image: IMAGES.serviceLongevity.src,
-    imageAlt: "Advanced Longevity & Performance Medicine",
-    title: "Advanced Longevity & Performance Medicine",
-    tags: ["Anti-aging protocols", "Hormone optimisation", "Long-term health planning"],
+    imageAlt: "Longevity & Performance Medicine",
+    title: "Longevity & Performance Medicine",
+    tags: ["NAD+ therapy", "Mitochondrial optimization", "Anti-aging protocols", "Hormone optimisation", "Long-term health planning"],
   },
   {
     href: "/services/wellness-specialized",
@@ -40,7 +40,7 @@ const SERVICES = [
     image: IMAGES.serviceAestheticSkin.src,
     imageAlt: "Aesthetic & Skin Medicine",
     title: "Aesthetic & Skin Medicine",
-    tags: ["Skin rejuvenation", "Advanced aesthetics", "Medical-grade treatments"],
+    tags: ["Skin health", "Body sculpting", "Advanced skin therapies", "Medical aesthetic devices"],
   },
   {
     href: "/services/post-surgical-recovery",
@@ -56,7 +56,7 @@ export default function PersonalizedProgramsSection() {
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
-    const scrollAmount = 420; // width of one card
+    const scrollAmount = 320;
     scrollRef.current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
@@ -72,6 +72,7 @@ export default function PersonalizedProgramsSection() {
               Personalized Programs for<br />Health Optimization
             </h2>
           </Reveal>
+
           <Reveal delay={0.1}>
             <p className="text-gray-500 leading-relaxed">
               Our programs provide advanced medical services, precise diagnostics, and clinical programs designed to optimise long-term health and performance.
@@ -79,7 +80,7 @@ export default function PersonalizedProgramsSection() {
           </Reveal>
         </div>
 
-        {/* Horizontal scroll cards */}
+        {/* ── Scroll Area ── */}
         <div className="relative">
 
           {/* Left button */}
@@ -98,15 +99,16 @@ export default function PersonalizedProgramsSection() {
             <ChevronRight size={18} />
           </button>
 
+          {/* Cards */}
           <div
             ref={scrollRef}
-            className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide"
+            className="flex gap-4 md:gap-5 overflow-x-auto overflow-y-hidden pb-3 -mx-4 px-3 sm:px-4 snap-x snap-mandatory scrollbar-hide scroll-smooth"
           >
             {SERVICES.map((svc, i) => (
               <Reveal key={svc.href} delay={i * 0.08}>
                 <Link
                   href={svc.href}
-                  className="group relative shrink-0 w-[420px] h-[440px] overflow-hidden snap-start block rounded-xl"
+                  className="group relative shrink-0 w-[280px] sm:w-[340px] md:w-[420px] h-[360px] sm:h-[400px] md:h-[440px] overflow-hidden snap-start block rounded-xl"
                 >
                   <Image
                     src={svc.image}
@@ -114,16 +116,25 @@ export default function PersonalizedProgramsSection() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 space-y-3">
-                    <h3 className="font-heading text-white text-lg leading-snug">{svc.title}</h3>
+
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 space-y-3">
+                    <h3 className="font-heading text-white text-base sm:text-lg leading-snug">
+                      {svc.title}
+                    </h3>
+
                     <div className="flex flex-wrap gap-1.5">
                       {svc.tags.map((tag) => (
-                        <span key={tag} className="text-white/70 text-xs border border-white/20 px-2 py-0.5">
+                        <span
+                          key={tag}
+                          className="text-white/70 text-[10px] sm:text-xs border border-white/20 px-2 py-0.5"
+                        >
                           {tag}
                         </span>
                       ))}
                     </div>
+
                     <span className="inline-flex items-center gap-1 text-white text-xs mt-1">
                       Learn More <ArrowRight size={11} />
                     </span>

@@ -38,14 +38,13 @@ export interface RelatedService {
 }
 
 export interface ServicePageProps {
-  hero: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    image: string;
-    imageAlt: string;
-    blurDataURL?: string;
-  };
+ hero: {
+  title: string;
+  subtitle: string;
+  image: string;
+  imageAlt: string;
+  blurDataURL?: string;
+};
 
   approach: {
     title: string;
@@ -109,7 +108,6 @@ export default function ServicePageTemplate({
     <>
       {/* ── Hero ── */}
       <PageHero
-        eyebrow={hero.eyebrow}
         title={hero.title}
         subtitle={hero.subtitle}
         image={hero.image}
@@ -118,7 +116,7 @@ export default function ServicePageTemplate({
       />
 
       {/* ── Approach (white bg) ── */}
-      <section className="py-24 bg-white">
+      <section className="py-10 bg-white">
         <div className="section-container grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="space-y-6">
@@ -219,8 +217,8 @@ export default function ServicePageTemplate({
       </section>
 
       {/* ── Personalised Plan (image bg) ── */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
+<section className="relative py-32 min-h-[700px] overflow-hidden">        
+    <div className="absolute inset-0 z-0">
           <Image
             src={plan.backgroundImage}
             alt={plan.backgroundImageAlt}

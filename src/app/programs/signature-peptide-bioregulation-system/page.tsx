@@ -15,14 +15,14 @@ const ARCHITECTURE = [
     title: "Advanced Diagnostic Intelligence",
     items: [
       "Comprehensive medical evaluation conducted under physician supervision",
-      "Deep biomarker and metabolic analysis tailored to each client",
-      "Full profiling of hormonal, inflammatory, and neuroinflammation health",
+      "Personalized biomarker analysis tailored to each client",
+      "Risk profiling for metabolic, inflammatory, and neurocognitive health",
     ],
   },
   {
     title: "IV & Injectable Optimization",
     items: [
-      "400+ Evidence-informed formulations",
+      "NAD+ therapy",
       "Antioxidant and mitochondrial support",
       "Recovery-focused infusion formats",
     ],
@@ -46,14 +46,14 @@ const ARCHITECTURE = [
     title: "Luxury Delivery",
     items: [
       "Home service or private suite",
-      "Discreet, high-end client experience",
+      "Discreet, high-net-worth client experience",
     ],
   },
   {
     title: "Tracking & Continuity",
     items: [
-      "Mid-cycle optimization monitoring",
-      "MIV-cycle optimization",
+      "Ongoing performance monitoring",
+      "Mid-cycle optimization",
       "Long-term longevity planning",
     ],
   },
@@ -190,7 +190,7 @@ export default function SignaturePeptidePage() {
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src={IMAGES.peptideHero?.src ?? IMAGES.serviceAssessment.src}
+              src="/peptides.png"
               alt="Signature Peptide Bioregulation System"
               fill
               className="object-cover object-center"
@@ -231,72 +231,96 @@ export default function SignaturePeptidePage() {
       </section>
 
       {/* ── Protocols ── */}
-      <section className="py-12 bg-[#F3F3F3] space-y-0">
-        {PROTOCOLS.map((protocol, i) => (
-          <Reveal key={protocol.title}>
-            <div className="border-t border-gray-200">
-              {/* Protocol header bar */}
-              <div className="bg-gray-800 px-6 py-3 flex items-center justify-between">
-                <span className="text-white/70 text-xs uppercase tracking-widest font-medium">
-                  {protocol.number}: {protocol.title}
-                </span>
-                <span className="text-secondary text-xs font-semibold border border-secondary px-3 py-1">
-                  {protocol.price}
-                </span>
-              </div>
+<section className="py-16 bg-[#F3F3F3] space-y-0">
+  {PROTOCOLS.map((protocol, i) => (
+    <Reveal key={protocol.title}>
+      <div className="border-t border-gray-200">
 
-              {/* Protocol content */}
-              <div className="grid lg:grid-cols-2 gap-0">
-                {/* Left: image */}
-                <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[320px]">
-                  <Image
-                    src={protocol.image}
-                    alt={protocol.imageAlt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+        {/* Header */}
+        <div className="bg-gray-800 px-6 py-4 flex items-center justify-between">
+          <span className="text-white text-sm uppercase tracking-widest font-bold">
+            {protocol.number}: {protocol.title}
+          </span>
+          <span className="text-secondary text-xs font-semibold border border-secondary px-3 py-1">
+            {protocol.price}
+          </span>
+        </div>
 
-                {/* Right: details */}
-                <div className="bg-white p-8 space-y-6">
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold text-gray-800 uppercase tracking-widest">Core Peptides:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {protocol.corePeptides.map((p) => (
-                        <span key={p} className="text-xs bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full">
-                          {p}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+        {/* Content */}
+        <div className="grid lg:grid-cols-2 gap-0">
 
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold text-gray-800 uppercase tracking-widest">Value & Benefits:</p>
-                    <ul className="space-y-1.5">
-                      {protocol.valueBenefits.map((b) => (
-                        <li key={b} className="text-gray-500 text-sm leading-relaxed flex gap-2">
-                          <span className="text-secondary shrink-0">•</span>{b}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          {/* IMAGE (UPDATED) */}
+          <div className="relative aspect-[4/3] lg:min-h-[420px]">
+            <Image
+              src={`/protocol${i + 1}.png`}
+              alt={protocol.imageAlt}
+              fill
+              className="object-cover"
+            />
+          </div>
 
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold text-gray-800 uppercase tracking-widest">What the Client Receives:</p>
-                    <ul className="space-y-1.5">
-                      {protocol.clientReceives.map((r) => (
-                        <li key={r} className="text-gray-500 text-sm leading-relaxed flex gap-2">
-                          <span className="text-secondary shrink-0">•</span>{r}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+          {/* DETAILS */}
+          <div className="bg-white p-10 space-y-8">
+
+            {/* CORE PEPTIDES */}
+            <div className="space-y-3 border border-[#C8A45D]/30 p-4 rounded-lg">
+              <p className="text-xs font-semibold text-gray-800 uppercase tracking-widest">
+                Core Peptides
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {protocol.corePeptides.map((p) => (
+                  <span
+                    key={p}
+                    className="text-xs bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full"
+                  >
+                    {p}
+                  </span>
+                ))}
               </div>
             </div>
-          </Reveal>
-        ))}
-      </section>
+
+            {/* VALUE & BENEFITS */}
+            <div className="space-y-3 border border-[#C8A45D]/30 p-4 rounded-lg">
+              <p className="text-xs font-semibold text-gray-800 uppercase tracking-widest">
+                Value & Benefits
+              </p>
+              <ul className="space-y-2">
+                {protocol.valueBenefits.map((b) => (
+                  <li
+                    key={b}
+                    className="text-gray-500 text-sm leading-relaxed flex gap-2"
+                  >
+                    <span className="text-secondary shrink-0">•</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CLIENT RECEIVES */}
+            <div className="space-y-3 border border-[#C8A45D]/30 p-4 rounded-lg">
+              <p className="text-xs font-semibold text-gray-800 uppercase tracking-widest">
+                What the Client Receives
+              </p>
+              <ul className="space-y-2">
+                {protocol.clientReceives.map((r) => (
+                  <li
+                    key={r}
+                    className="text-gray-500 text-sm leading-relaxed flex gap-2"
+                  >
+                    <span className="text-secondary shrink-0">•</span>
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </Reveal>
+  ))}
+</section>
 
       {/* ── Legal & Clinical ── */}
       <section className="py-24 bg-white">

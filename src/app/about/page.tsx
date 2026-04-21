@@ -72,9 +72,9 @@ const FOUNDER_HIGHLIGHTS = [
 export default function AboutPage() {
   return (
     <>
+      {/* ── Logo hero — desktop only ── */}
       <Reveal>
-        {/* ── Logo hero ── */}
-        <section className="bg-[#F8F4EA] flex items-center justify-center py-40">
+        <section className="hidden lg:flex bg-[#F8F4EA] items-center justify-center py-20 md:py-40">
           <Image
             src="/logo2.png"
             alt="Consult Doctor B"
@@ -99,11 +99,11 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-white/90" />
           </div>
 
-          <div className="relative z-10 section-container py-20 grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left: image with gold border frame */}
+          <div className="relative z-10 section-container py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Image — full width on mobile, sticky on desktop */}
             <div className="relative lg:sticky top-28 self-start flex justify-start">
               <div className="absolute top-5 left-5 w-[80%] h-[92%] border border-secondary/40 rounded-xl z-0" />
-              <div className="relative w-[80%] aspect-[3/4] overflow-hidden rounded-xl z-10">
+              <div className="relative w-[80%] lg:w-[80%] aspect-[3/4] overflow-hidden rounded-xl z-10">
                 <Image
                   src="/bashirat.png"
                   alt="Dr. Bashirat Hassan Olamide"
@@ -113,8 +113,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right: text */}
-            <div className="space-y-5 pt-4 bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-black/5 shadow-sm">
+            {/* Text — below image on mobile, beside on desktop */}
+            <div className="space-y-5 pt-24 bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-black/5 shadow-sm">
               <h2 className="font-heading text-2xl text-black">Our Founder</h2>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Dr. Bashirat Hassan Olamide, M.D., is a physician whose philosophy of medicine was shaped by a rare combination of academic distinction, scientific curiosity, personal experience, and international clinical exposure.
@@ -198,35 +198,6 @@ export default function AboutPage() {
                 className="object-cover object-center"
               />
             </div>
-          </div>
-        </section>
-      </Reveal>
-
-      <Reveal>
-        {/* ── Founder Highlights ── */}
-        <section className="py-24 bg-[#FFFFFF]">
-          <div className="section-container space-y-10">
-            <div className="space-y-2">
-              <p className="text-secondary text-xs uppercase tracking-widest">Our Founder</p>
-              <h2 className="font-heading text-3xl text-black">A Career Built on Precision & Purpose</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 border border-secondary/20 divide-y md:divide-y-0 divide-secondary/20">
-              {FOUNDER_HIGHLIGHTS.map((item) => (
-                <div
-                  key={item.title}
-                  className="p-8 space-y-2 border-secondary/20 border hover:bg-[#f0e9d5] transition-colors duration-200"
-                >
-                  <p className="font-heading text-4xl text-secondary">{item.stat}</p>
-                  <p className="text-xs uppercase tracking-widest text-black font-medium">{item.title}</p>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.body}</p>
-                </div>
-              ))}
-            </div>
-
-            <blockquote className="border-l-2 border-secondary pl-6 font-heading text-xl italic text-gray-600 max-w-2xl">
-              "Medicine is not merely about treating disease — it is about unlocking the full potential of human health."
-            </blockquote>
           </div>
         </section>
       </Reveal>

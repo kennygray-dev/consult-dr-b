@@ -10,48 +10,42 @@ export const metadata: Metadata = {
 export default function MetabolicWeightPage() {
   return (
     <ServicePageTemplate
-      // ── Hero ──────────────────────────────────────────────────────────
       hero={{
-        eyebrow: "Metabolic & Weight Optimization",
         title: "Metabolic & Weight Optimization",
         subtitle:
-          "Physician-led programs designed to restore metabolic balance, support sustainable weight management, and improve overall body composition through clinically guided care.",
+          "Physician-led metabolic programs designed to restore balance, improve body composition, and deliver sustainable health outcomes through precision medicine.",
         image: IMAGES.serviceMetabolicHero.src,
         imageAlt: IMAGES.serviceMetabolicHero.alt,
         blurDataURL: IMAGES.serviceMetabolicHero.blurDataURL,
       }}
 
-      // ── Approach ──────────────────────────────────────────────────────
       approach={{
         title: "A Clinical Approach to Weight & Metabolic Health",
         paragraphs: [
-          "At Consult Dr B, metabolic health is approached as a core driver of overall wellbeing, not just weight management. Our programs are designed to address the underlying factors that influence weight gain, energy regulation, and metabolic efficiency — including hormonal balance, insulin sensitivity, and cellular function.",
-          "By combining advanced diagnostics, medical therapies, and personalised lifestyle strategies, we create structured programs that deliver safe, sustainable, and measurable results.",
+          "At Consult Dr B, metabolic health is approached as a core driver of overall wellbeing, not just weight management.",
+          "We combine diagnostics, medical therapies, and personalised lifestyle strategies for measurable results.",
         ],
         ctaText: "Book a Metabolic Assessment",
-        // 🔁 Replace with your own image when ready
         image: IMAGES.serviceMetabolic.src,
         imageAlt: IMAGES.serviceMetabolic.alt,
         blurDataURL: IMAGES.serviceMetabolic.blurDataURL,
       }}
 
-      // ── Conditions ────────────────────────────────────────────────────
       conditions={{
         sectionLabel: "What We Help You Address",
-        sectionSubtitle: "Our metabolic programs are designed for individuals experiencing:",
+        sectionSubtitle:
+          "Our metabolic programs are designed for individuals experiencing:",
         items: [
           "Difficulty losing or maintaining weight",
           "Slow or inefficient metabolism",
           "Weight regain after previous programs",
           "Fatigue linked to metabolic dysfunction",
-          "Body composition challenges (fat vs muscle balance)",
+          "Body composition challenges",
         ],
-        // 🔁 Replace with your own image when ready
         backgroundImage: "/personalized-metabolic.png",
         backgroundImageAlt: IMAGES.serviceMetabolic.alt,
       }}
 
-      // ── Programs Grid ─────────────────────────────────────────────────
       programs={{
         sectionTitle: "Designed for Measurable Transformation",
         cards: [
@@ -59,105 +53,98 @@ export default function MetabolicWeightPage() {
             image: "/metabolic1.png",
             imageAlt: "GLP Weight Management",
             title: "GLP Weight Management",
-            desc: "Clinically guided weight management using advanced therapies to regulate appetite and support sustainable fat loss.",
+            desc: "Clinically guided weight management using advanced therapies.",
           },
           {
             image: "/metabolic2.png",
             imageAlt: "Metabolic Health Optimisation",
             title: "Metabolic Health Optimisation",
-            desc: "Targeted strategies designed to improve metabolic efficiency, energy balance, and overall physiological function.",
+            desc: "Improve metabolic efficiency and energy balance.",
           },
           {
             image: "/metabolic3.png",
             imageAlt: "Body Composition Management",
             title: "Body Composition Management",
-            desc: "Programs focused on reducing body fat while preserving or improving lean muscle mass.",
+            desc: "Reduce fat while preserving lean muscle mass.",
           },
           {
             image: "/metabolic44.png",
             imageAlt: "Medical Weight Loss Protocols",
             title: "Medical Weight Loss Protocols",
-            desc: "Structured, physician-supervised programs tailored to your metabolic profile and health goals.",
+            desc: "Structured physician-supervised programs.",
           },
         ],
       }}
 
-      // ── Plan ──────────────────────────────────────────────────────────
       plan={{
         title: "Your Personalized Program",
         steps: [
-          { title: "Comprehensive Consultation", desc: "In-depth review of your health history, lifestyle, and goals." },
-          { title: "Advanced Diagnostics",       desc: "Laboratory testing to assess metabolic and hormonal function." },
-          { title: "Tailored Treatment Plan",    desc: "Personalised program combining medical therapies and lifestyle strategies." },
-          { title: "Ongoing Medical Support",    desc: "Continuous monitoring and adjustments to ensure optimal results." },
+          { title: "Consultation", desc: "Health history review." },
+          { title: "Diagnostics", desc: "Metabolic testing." },
+          { title: "Treatment Plan", desc: "Personalised strategy." },
+          { title: "Ongoing Support", desc: "Monitoring & adjustments." },
         ],
-        // 🔁 Replace with your own image when ready
         backgroundImage: "/personalized-metabolic.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
       }}
 
-      // ── FAQ ───────────────────────────────────────────────────────────
       faq={{
         items: [
           {
             question: "Is this different from regular weight loss programs?",
-            answer: "Yes. Our programs are medically supervised and focus on metabolic and hormonal factors, not just calorie restriction.",
+            answer: "Yes. We treat metabolic causes, not just calories.",
           },
           {
-            question: "Do I need medical tests before starting?",
-            answer: "Yes. Diagnostics are essential to create a safe and effective personalised plan.",
+            question: "Do I need tests?",
+            answer: "Yes, diagnostics are required.",
           },
           {
-            question: "Are the results sustainable?",
-            answer: "Our programs are designed for long-term metabolic balance, not short-term weight loss.",
+            question: "Are results sustainable?",
+            answer: "Yes, focus is long-term correction.",
           },
         ],
       }}
 
-      // ── CTA Banner ────────────────────────────────────────────────────
       cta={{
         title: "Start Your Metabolic Transformation",
-        subtitle: "Book a consultation to begin a personalised, medically guided program designed for sustainable results.",
+        subtitle: "Book a consultation to begin a personalised program.",
         buttonText: "Contact Our Team",
-        // 🔁 Replace with your own image when ready
         backgroundImage: IMAGES.servicesHero.src,
         backgroundImageAlt: IMAGES.servicesHero.alt,
       }}
 
-      // ── Related Services ──────────────────────────────────────────────
       relatedServices={[
-
-  {
-    href: "/services/regenerative-cellular",
-    image: IMAGES.serviceHormone.src,
-    imageAlt: "Regenerative & Cellular Medicine",
-    label: "Regenerative & Cellular Medicine",
-  },
-  {
-    href: "/services/longevity-performance",
-    image: IMAGES.serviceLongevity.src,
-    imageAlt: "Longevity & Performance Medicine",
-    label: "Longevity & Performance Medicine",
-  },
-  {
-    href: "/services/aesthetics-skin",
-    image: IMAGES.serviceAestheticSkin.src,
-    imageAlt: "Aesthetic & Skin Medicine",
-    label: "Aesthetic & Skin Medicine",
-  },
-  {
+        {
+          href: "/services/regenerative-cellular",
+          image: IMAGES.serviceHormone.src,
+          imageAlt: "Regenerative & Cellular Medicine",
+          label: "Regenerative & Cellular Medicine",
+        },
+        {
+          href: "/services/longevity-performance",
+          image: IMAGES.serviceLongevity.src,
+          imageAlt: "Longevity & Performance Medicine",
+          label: "Longevity & Performance Medicine",
+        },
+        {
+          href: "/services/aesthetics-skin",
+          image: IMAGES.serviceAestheticSkin.src,
+          imageAlt: "Aesthetic & Skin Medicine",
+          label: "Aesthetic & Skin Medicine",
+        },
+        {
     href: "/services/post-surgical-recovery",
     image: IMAGES.servicePostSurgical.src,
     imageAlt: "Post-Surgical Recovery & Wound Healing",
     label: "Post-Surgical Recovery & Wound Healing",
   },
-  {
-    href: "/services/wellness-specialized",
-    image: IMAGES.serviceAssessment.src,
-    imageAlt: "Specialized Wellness Programs",
-    label: "Specialized Wellness Programs",
-  },
-]}
+         {
+          href: "/services/wellness-specialized",
+          image: IMAGES.serviceAssessment.src,
+          imageAlt: "Specialized Wellness Programs",
+          label: "Specialized Wellness Programs",
+        },
+      ]}
     />
   );
 }

@@ -13,6 +13,7 @@ const phone = "2347072261185";
 const waMessage = encodeURIComponent("Hello, I'd like to book a consultation with Consult Dr B.");
 const waHref = `https://wa.me/${phone}?text=${waMessage}`;
 
+
 export default function ContactPage() {
   const services = [
     "Metabolic and Weight",
@@ -52,8 +53,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact Us"
-        title="Let's Start Your Journey"
+        title="Contact Us"
         subtitle="Reach out to our team and take the first step toward optimal health."
         image="/team.png"
         imageAlt="Consult Dr B team"
@@ -109,52 +109,9 @@ export default function ContactPage() {
         </section>
       </Reveal>
 
-      {/* ── Phone & Email cards ── */}
-      <Reveal>
-        <section className="py-6 pb-24 bg-white">
-          <div className="section-container grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Phone */}
-            <div className="border border-black/10 rounded-2xl p-8 space-y-4 shadow-sm">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                <Phone size={18} className="text-primary" />
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-primary">Phone</h3>
-                <p className="text-gray-400 text-sm mt-1">Available for direct communication during working hours.</p>
-              </div>
-              <a
-                href="tel:+2347072261185"
-                className="flex items-center justify-center gap-2 w-full bg-secondary text-white font-medium py-3.5 px-6 rounded-xl hover:bg-secondary/90 transition-colors duration-200 text-sm"
-              >
-                <Phone size={15} />
-                +234 707 226 1185
-              </a>
-            </div>
-
-            {/* Email */}
-            <div className="border border-black/10 rounded-2xl p-8 space-y-4 shadow-sm">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                <Mail size={18} className="text-primary" />
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-primary">Email</h3>
-                <p className="text-gray-400 text-sm mt-1">Send us your inquiries and our team will respond promptly.</p>
-              </div>
-              <a
-                href={`mailto:${CONTACT_INFO.email}`}
-                className="flex items-center justify-center gap-2 w-full bg-secondary text-white font-medium py-3.5 px-6 rounded-xl hover:bg-secondary/90 transition-colors duration-200 text-sm"
-              >
-                <Mail size={15} />
-                {CONTACT_INFO.email}
-              </a>
-            </div>
-          </div>
-        </section>
-      </Reveal>
-
       {/* ── Contact form + info ── */}
       <Reveal>
-        <section className="py-24 bg-[#F8F4EA]">
+        <section className="py-24 bg-[#FFFFFF]">
           <div className="section-container grid lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div className="space-y-10">

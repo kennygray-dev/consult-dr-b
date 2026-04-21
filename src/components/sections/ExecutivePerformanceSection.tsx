@@ -48,7 +48,7 @@ export default function ExecutivePerformanceSection() {
               Led by DR. OWEN MICHAEL IROWA, MD, a licensed medical doctor with over a decade of experience, our programs combine clinical insight and advanced training to optimize performance, body composition, and long-term health.
             </p>
             <Link
-              href="/services/performance-fitness"
+              href="/programs/executive-performance"
               className="inline-flex items-center gap-2 border border-secondary text-secondary bg-transparent px-6 py-3 text-sm hover:bg-secondary hover:text-white transition-colors"
             >
               Learn About Our Fitness Program <ArrowRight size={15} />

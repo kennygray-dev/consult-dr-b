@@ -13,13 +13,27 @@ export default function FAQSection({ items }: { items: { question: string; answe
           {items.map((item, i) => (
             <Reveal key={item.question} delay={i * 0.05}>
               <details className="group py-5 cursor-pointer">
-                <summary className="flex items-center justify-between gap-4 font-heading text-black list-none">
+                
+                {/* CLICK AREA FIXED */}
+                <summary className="flex items-center justify-between gap-4 font-heading text-black list-none cursor-pointer w-full">
                   {item.question}
-                  <Plus size={18} className="shrink-0 text-black transition-transform group-open:rotate-45" />
+                  
+                  {/* ICON FIXED */}
+                  <Plus
+                    size={18}
+                    className="shrink-0 text-black transition-transform duration-300 ease-in-out group-open:rotate-45 pointer-events-none"
+                  />
                 </summary>
-                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                  {item.answer}
-                </p>
+
+                {/* ANIMATION ADDED */}
+                <div className="grid transition-all duration-300 ease-in-out grid-rows-[0fr] group-open:grid-rows-[1fr]">
+                  <div className="overflow-hidden">
+                    <p className="mt-3 text-gray-500 text-sm leading-relaxed opacity-0 group-open:opacity-100 transition-opacity duration-300">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
+
               </details>
             </Reveal>
           ))}

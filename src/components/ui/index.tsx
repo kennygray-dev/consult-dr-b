@@ -130,36 +130,62 @@ interface PageHeroProps {
   blurDataURL?: string;
 }
 
-export function PageHero({ eyebrow, title, subtitle, image, imageAlt = "Hero image", blurDataURL }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+  image,
+  imageAlt = "Hero image",
+  blurDataURL,
+}: PageHeroProps) {
   return (
-   <section className="relative min-h-[380px] md:min-h-[460px] flex items-end bg-primary overflow-hidden mx-4 mb-4 rounded-b-2xl">
-      {/* Optimised background image via Next.js Image */}
-      {image && (
-        <Image
-          src={image}
-          alt={imageAlt}
-          fill
-          priority              // LCP image — load immediately, no lazy
-          sizes="100vw"
-          quality={85}
-          className="object-cover object-center"
-          placeholder={blurDataURL ? "blur" : "empty"}
-          blurDataURL={blurDataURL}
-        />
-      )}
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/30" />
-
-      <div className="section-container relative z-10 pb-16 pt-32 space-y-4">
-        {eyebrow && <p className="section-eyebrow text-secondary">{eyebrow}</p>}
-        <h1 className="font-heading text-4xl md:text-6xl text-white font-bold leading-tight max-w-3xl">
-          {title}
-        </h1>
-        <div className="gold-rule" />
-        {subtitle && (
-          <p className="text-white/70 text-lg max-w-xl leading-relaxed">{subtitle}</p>
+    <>
+      <section className="relative min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[520px] flex items-center bg-primary overflow-hidden mx-4 mb-0 rounded-b-2xl">
+        
+        {/* Background image */}
+        {image && (
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            priority
+            sizes="100vw"
+            quality={85}
+            className="object-cover object-center"
+            placeholder={blurDataURL ? "blur" : "empty"}
+            blurDataURL={blurDataURL}
+          />
         )}
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/30" />
+
+        {/* Content inside image */}
+        <div className="section-container relative z-10 space-y-4 py-10 md:py-12 -translate-y-2 md:translate-y-0">
+          {eyebrow && (
+            <p className="section-eyebrow text-secondary">
+              {eyebrow}
+            </p>
+          )}
+          <h1 className="font-heading text-5xl sm:text-4xl md:text-6xl text-white font-bold leading-tight max-w-3xl">
+            {title}
+          </h1>
+          <div className="gold-rule" />
+        </div>
+      </section>
+
+      {subtitle && (
+  <div className="mx-4 mb-4 bg-[#F8F4EA] rounded-b-2xl border-t border-secondary/20 py-10 px-6">
+    <div className="max-w-2xl mx-auto text-center space-y-3">
+      <p className="text-primary text-base md:text-lg leading-relaxed font-light tracking-wide">
+        {subtitle}
+      </p>
+      <div className="flex justify-center">
+        <span className="gold-rule" />
       </div>
-    </section>
+    </div>
+  </div>
+)}
+    </>
   );
 }
