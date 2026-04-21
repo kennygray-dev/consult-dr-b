@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -19,17 +19,13 @@ export default function Header() {
   const lastScrollY = useRef(0);
   const navRef = useRef<HTMLDivElement>(null);
 
-  // ── Scroll logic ──
   useEffect(() => {
     let ticking = false;
 
     const updateScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // NEW: proper scroll state for styling
       setIsScrolled(currentScrollY > 50);
 
-      // header show/hide behavior (unchanged)
       if (currentScrollY < 50) {
         setShowHeader(true);
       } else if (currentScrollY > lastScrollY.current) {
@@ -53,7 +49,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // ── Close mobile on route change ──
   useEffect(() => {
     setMobileOpen(false);
     setOpenDropdown(null);
@@ -85,7 +80,7 @@ export default function Header() {
           />
         </Link>
 
-        {/* ── Desktop Nav ── */}
+        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {sortedLinks.map((link) =>
             link.children ? (
@@ -95,7 +90,6 @@ export default function Header() {
                 onMouseEnter={() => setOpenDropdown(link.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                {/* Trigger */}
                 <div
                   className={cn(
                     "flex items-center gap-1 px-4 py-2 text-sm transition-colors cursor-pointer",
@@ -112,7 +106,6 @@ export default function Header() {
                   />
                 </div>
 
-                {/* Dropdown */}
                 <div
                   className={cn(
                     "absolute left-1/2 -translate-x-1/2 mt-4 w-[520px] transition-all duration-300",
@@ -129,7 +122,6 @@ export default function Header() {
                         className="flex justify-between px-4 py-3 rounded-xl hover:bg-gray-50"
                       >
                         {child.label}
-                        <ArrowRight size={13} />
                       </Link>
                     ))}
                   </div>
@@ -169,7 +161,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* ── Mobile Menu ── */}
+      {/* Mobile Menu */}
       <div
         className={cn(
           "lg:hidden overflow-hidden transition-all duration-300 bg-white border-t",
@@ -217,10 +209,9 @@ export default function Header() {
                             router.push(child.href);
                           }, 50);
                         }}
-                        className="w-full text-left px-3 py-2 text-sm flex justify-between"
+                        className="w-full text-left px-3 py-2 text-sm"
                       >
                         {child.label}
-                        <ArrowRight size={12} />
                       </button>
                     ))}
                   </div>
