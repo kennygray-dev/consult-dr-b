@@ -61,10 +61,10 @@ export default function WhatsAppFloat(): JSX.Element {
           {/* Close */}
           <button
             onClick={() => setHovered(false)}
-            className="absolute top-2 right-2 text-black/60 hover:text-black transition"
+            className="absolute top-3 right-8 text-black/60 hover:text-black transition"
             aria-label="Close"
           >
-            <X size={14} />
+            <X size={20} />
           </button>
 
           <p className="text-xs text-black/60 mb-1">
