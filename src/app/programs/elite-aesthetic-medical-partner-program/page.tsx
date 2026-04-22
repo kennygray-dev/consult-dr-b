@@ -147,7 +147,7 @@ export default function EliteAestheticPartnerPage() {
                       className="object-contain invert"
                     />
                   </div>
-                  <h3 className="font-heading text-white font-semibold text-base">
+                  <h3 className="font-body text-white font-semibold text-base">
                     {pillar.title}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed">{pillar.desc}</p>

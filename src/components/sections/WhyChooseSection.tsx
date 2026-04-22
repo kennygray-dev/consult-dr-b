@@ -56,6 +56,7 @@ export default function WhyChooseSection() {
             lg:grid-cols-4
             gap-6
             sm:gap-0
+            sm:divide-x sm:divide-white/20
           "
         >
           {WHY_US.map((item, i) => (
@@ -67,7 +68,6 @@ export default function WhyChooseSection() {
                   py-6 sm:py-0
 
                   /* MOBILE CARD STYLE */
-                  sm:border-l sm:border-white/20
 
                   ${i !== 0 ? "border-t border-white/15 sm:border-t-0" : ""}
                 `}
@@ -83,7 +83,7 @@ export default function WhyChooseSection() {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="font-heading text-white font-semibold">
+                <h3 className="font-body text-white font-semibold">
                   {item.title}
                 </h3>
 
