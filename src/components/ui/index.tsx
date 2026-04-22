@@ -161,17 +161,17 @@ export function PageHero({
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/30" />
 
         {/* Content inside image */}
-        <div className="section-container relative z-10 space-y-4 py-10 md:py-12 -translate-y-2 md:translate-y-0">
-          {eyebrow && (
-            <p className="section-eyebrow text-secondary">
-              {eyebrow}
-            </p>
-          )}
-          <h1 className="font-heading text-5xl sm:text-4xl md:text-6xl text-white font-bold leading-tight max-w-3xl">
-            {title}
-          </h1>
-          <div className="gold-rule" />
-        </div>
+<div className="section-container relative z-10 space-y-3 py-10 md:py-12 -translate-y-2 md:translate-y-0">
+  {eyebrow && (
+    <p className="section-eyebrow text-secondary">
+      {eyebrow}
+    </p>
+  )}
+  <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold leading-[1.1] max-w-3xl">
+    {title}
+  </h1>
+  <div className="gold-rule" />
+</div>
       </section>
 
       {subtitle && (
