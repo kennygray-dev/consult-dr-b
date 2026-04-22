@@ -57,25 +57,25 @@ export default function AestheticsSkinPage() {
         sectionTitle: "Designed for Natural, Lasting Results",
         cards: [
           {
-            image: "/aesthetic1.png",
+            image: "/Aesthetic1.png",
             imageAlt: "Beauty & Skin Health Programs",
             title: "Beauty & Skin Health Programs",
             desc: "Personalised treatments designed to maintain and improve overall skin health.",
           },
           {
-            image: "/aesthetic2.png",
+            image: "/Aesthetic2.png",
             imageAlt: "Body Sculpting",
             title: "Body Sculpting",
             desc: "Clinically guided procedures focused on enhancing body contour and shape.",
           },
           {
-            image: "/aesthetic3.png",
+            image: "/Aesthetic3.png",
             imageAlt: "Advanced Skin Therapies",
             title: "Advanced Skin Therapies",
             desc: "Targeted treatments designed to improve skin texture, tone, and appearance.",
           },
           {
-            image: "/aesthetic4.png",
+            image: "/Aesthetic4.png",
             imageAlt: "Medical Aesthetic Devices",
             title: "Medical Aesthetic Devices",
             desc: "Use of advanced technologies to support skin rejuvenation and non-invasive enhancements.",
