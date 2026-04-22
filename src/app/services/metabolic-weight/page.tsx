@@ -79,10 +79,10 @@ export default function MetabolicWeightPage() {
       plan={{
         title: "Your Personalized Program",
         steps: [
-          { title: "Consultation", desc: "Health history review." },
-          { title: "Diagnostics", desc: "Metabolic testing." },
-          { title: "Treatment Plan", desc: "Personalised strategy." },
-          { title: "Ongoing Support", desc: "Monitoring & adjustments." },
+          { title: "Comprehensive Consultation", desc: "In-depth review of your health history, lifestyle, and goals." },
+          { title: "Advanced Diagnostics", desc: "Laboratory testing to assess metabolic and hormonal function." },
+          { title: "Tailored Treatment Plan", desc: "Personalized program combining medical therapies and lifestyle strategies." },
+          { title: "Ongoing Medical Support", desc: "Continuous monitoring and adjustments to ensure optimal results." },
         ],
         backgroundImage: "/personalized-metabolic.png",
         backgroundImageAlt: IMAGES.programsHero.alt,
@@ -92,22 +92,22 @@ export default function MetabolicWeightPage() {
         items: [
           {
             question: "Is this different from regular weight loss programs?",
-            answer: "Yes. We treat metabolic causes, not just calories.",
+            answer: "Yes. Our programs are medically supervised and focus on metabolic and hormonal factors, not just calorie restriction.",
           },
           {
-            question: "Do I need tests?",
-            answer: "Yes, diagnostics are required.",
+            question: "Do I need medical tests before starting??",
+            answer: "Yes. Diagnostics are essential to create a safe and effective personalized plan.",
           },
           {
             question: "Are results sustainable?",
-            answer: "Yes, focus is long-term correction.",
+            answer: "Our programs are designed for long-term metabolic balance, not short-term weight loss.",
           },
         ],
       }}
 
       cta={{
         title: "Start Your Metabolic Transformation",
-        subtitle: "Book a consultation to begin a personalised program.",
+        subtitle: "Book a consultation to begin a personalized, medically guided program designed for sustainable results.",
         buttonText: "Contact Our Team",
         backgroundImage: IMAGES.servicesHero.src,
         backgroundImageAlt: IMAGES.servicesHero.alt,
