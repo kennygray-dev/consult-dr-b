@@ -9,7 +9,7 @@ export default function MissionBannerSection() {
       {/* Full-width image */}
       <div       className="relative w-full section-container px-2 md:px-4 aspect-[16/7] md:aspect-[16/4] overflow-hidden rounded-none">
         <Image
-          src="/Precision.png"
+          src="/precision.png"
           alt="Medical excellence"
           fill
           className="object-cover object-center"
