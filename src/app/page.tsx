@@ -44,7 +44,8 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* ── Hero ── */}
+<section className="relative min-h-[90vh] flex items-center overflow-hidden mx-4 rounded-b-2xl">
         <Image
           src={IMAGES.homeHero.src}
           alt={IMAGES.homeHero.alt}
