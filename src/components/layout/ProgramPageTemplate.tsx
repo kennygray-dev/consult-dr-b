@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { IMAGES } from "@/lib/images";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import CTABanner from "@/components/sections/CTABanner";
@@ -110,50 +111,54 @@ export default function ProgramPageTemplate({
       </section>
 
       {/* ── Specialist ── */}
-      <section className="py-24 bg-white border-t border-gray-100">
-        <div className="section-container grid lg:grid-cols-2 gap-16 items-start">
-          <Reveal>
-            <div className="space-y-6">
-              <h2 className="font-heading text-3xl text-black leading-tight">
-                {specialist.sectionTitle}
-              </h2>
+<section className="py-24 bg-white border-t border-gray-100">
+  <div className="section-container grid lg:grid-cols-2 gap-16 items-start">
+    <Reveal>
+      <div className="space-y-6">
+        <h2 className="font-heading text-3xl text-black leading-tight">
+          {specialist.sectionTitle}
+        </h2>
 
-              <div className="space-y-1">
-                <p className="font-semibold text-gray-800 text-sm">
-                  {specialist.doctor.name}
-                </p>
-                <p className="text-gray-500 text-sm">
-                  {specialist.doctor.role}
-                </p>
+        <div className="space-y-1">
+          <p className="font-semibold text-gray-800 text-sm">
+            {specialist.doctor.name}
+          </p>
+          <p className="text-gray-500 text-sm">
+            {specialist.doctor.role}
+          </p>
 
-                <ul className="mt-2 space-y-0.5">
-                  {specialist.doctor.credentials.map((c) => (
-                    <li
-                      key={c}
-                      className="text-gray-500 text-sm before:content-['•'] before:mr-2 before:text-secondary"
-                    >
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="text-gray-500 text-sm leading-relaxed">
-                {specialist.doctor.bio}
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="relative aspect-[3/4] overflow-hidden rounded-full max-w-sm ml-auto">
-            <Image
-              src={specialist.doctor.image}
-              alt={specialist.doctor.imageAlt}
-              fill
-              className="object-cover object-top"
-            />
-          </div>
+          <ul className="mt-2 space-y-0.5">
+            {specialist.doctor.credentials.map((c) => (
+              <li
+                key={c}
+                className="text-gray-500 text-sm before:content-['•'] before:mr-2 before:text-secondary"
+              >
+                {c}
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
+
+        <p className="text-gray-500 text-sm leading-relaxed">
+          {specialist.doctor.bio}
+        </p>
+      </div>
+    </Reveal>
+
+    {/* REPLACE the old image div with this */}
+    <Reveal delay={0.1}>
+  <div className="relative w-full max-w-sm aspect-[3/4] overflow-hidden rounded-2xl mx-auto">
+    <Image
+      src={IMAGES.coachHero.src}
+      alt={specialist.doctor.imageAlt}
+      fill
+      className="object-cover object-top"
+    />
+  </div>
+</Reveal>
+
+  </div>
+</section>
 
       {/* ── What We Optimize ── */}
       <section className="relative py-32 min-h-[700px] flex items-center overflow-hidden">

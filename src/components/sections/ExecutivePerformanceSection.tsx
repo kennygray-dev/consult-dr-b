@@ -3,14 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
-import { IMAGES } from "@/lib/images";
 
 export default function ExecutivePerformanceSection() {
   return (
     <section className="py-24 bg-white">
       <div className="section-container grid lg:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT: Overlapping images */}
+        {/* LEFT: Image */}
         <Reveal>
           <div className="relative flex justify-center">
             {/* Rounded border outline — offset to the right */}
@@ -19,20 +18,10 @@ export default function ExecutivePerformanceSection() {
             {/* Main portrait image */}
             <div className="relative w-[75%] aspect-[3/4] overflow-hidden rounded-2xl z-10">
               <Image
-                src={IMAGES.coachHero.src}
+                src="/executive.jpg"
                 alt="Executive Performance"
                 fill
                 className="object-cover object-top"
-              />
-            </div>
-
-            {/* Smaller overlapping image — bottom center, in front */}
-            <div className="absolute bottom-[-10%] left-[30%] w-[42%] aspect-[2/3] overflow-hidden rounded-xl z-20 shadow-2xl border border-gray-100">
-              <Image
-                src={IMAGES.coachOverlay.src}
-                alt="Performance overlay"
-                fill
-                className="object-cover"
               />
             </div>
           </div>

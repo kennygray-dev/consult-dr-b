@@ -39,9 +39,9 @@ const config: Config = {
         "dark-card": "#111827",
       },
       fontFamily: {
-        heading: ["var(--font-playfair)", "Georgia", "serif"],
-        body: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
-      },
+  heading: ["var(--font-cormorant)", "Georgia", "serif"],
+  body: ["var(--font-poppins)", "system-ui", "sans-serif"],
+},
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
