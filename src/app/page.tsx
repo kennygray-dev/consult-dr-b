@@ -59,7 +59,7 @@ export default function HomePage() {
         />
 
         {/* Reduced darkness */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/15" />
 
         <div className="section-container relative z-10 py-16 sm:py-24">
           <motion.div
