@@ -69,8 +69,7 @@ export default function Header() {
     >
       <div
         ref={navRef}
-        className="section-container flex items-center justify-between h-20 relative"
-      >
+className="section-container flex items-center justify-between h-14 lg:h-16 relative"      >
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <img
