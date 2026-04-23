@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -47,12 +46,7 @@ export default function HomePage() {
       {/* ── Hero ── */}
       {/* ── Hero ── */}
 <section className="relative min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0"
-        >
+        <div className="absolute inset-0">
           <video
             src="/Video11.mp4"
             autoPlay
@@ -61,10 +55,10 @@ export default function HomePage() {
             loop
             className="w-full h-full object-cover object-center"
           />
-        </motion.div>
+        </div>
 
         {/* Darker darkness */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/75" />
 
         <div className="section-container relative z-10 py-16 sm:py-24">
           <motion.div
