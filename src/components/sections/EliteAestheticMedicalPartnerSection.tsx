@@ -21,7 +21,7 @@ export default function EliteAestheticMedicalPartnerSection() {
             </p>
 
             <Link
-              href="/partnership"
+              href="/programs/elite-aesthetic-medical-partner-program"
               className="inline-flex items-center gap-2 px-6 py-3 border border-black text-black bg-transparent hover:bg-black hover:text-white transition-colors text-sm"
             >
               Partner with us <ArrowRight size={15} />

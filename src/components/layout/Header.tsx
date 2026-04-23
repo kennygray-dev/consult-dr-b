@@ -80,12 +80,12 @@ className="section-container flex items-center justify-between h-14 lg:h-16 rela
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden lg:flex items-center gap-0 absolute left-1/2 -translate-x-1/2">
           {sortedLinks.map((link) =>
             link.children ? (
               <div
                 key={link.href}
-                className="relative"
+                className="relative border-r border-gray-200/60 last:border-none"
                 onMouseEnter={() => setOpenDropdown(link.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
@@ -131,7 +131,7 @@ className="section-container flex items-center justify-between h-14 lg:h-16 rela
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 text-sm transition-colors",
+                  "px-4 py-2 text-sm transition-colors border-r border-gray-200/60 last:border-none",
                   isScrolled ? "text-[#C8A24A]" : "text-black"
                 )}
               >
@@ -170,7 +170,7 @@ className="section-container flex items-center justify-between h-14 lg:h-16 rela
         <div className="section-container py-4 flex flex-col">
           {sortedLinks.map((link) =>
             link.children ? (
-              <div key={link.href}>
+              <div key={link.href} className="mx-3 border-b border-gray-200/60 last:border-none">
                 <button
                   onClick={() =>
                     setOpenDropdown(
@@ -217,16 +217,17 @@ className="section-container flex items-center justify-between h-14 lg:h-16 rela
                 </div>
               </div>
             ) : (
-              <button
-                key={link.href}
-                onClick={() => {
-                  setMobileOpen(false);
-                  router.push(link.href);
-                }}
-                className="px-4 py-3 text-left text-sm"
-              >
-                {link.label}
-              </button>
+              <div key={link.href} className="mx-3 border-b border-gray-200/60 last:border-none">
+                <button
+                  onClick={() => {
+                    setMobileOpen(false);
+                    router.push(link.href);
+                  }}
+                  className="w-full px-4 py-3 text-left text-sm"
+                >
+                  {link.label}
+                </button>
+              </div>
             )
           )}
 

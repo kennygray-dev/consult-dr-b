@@ -83,7 +83,7 @@ export default function ContactPage() {
               {/* Doctor image */}
               <div className="relative h-72 w-full">
                 <Image
-                  src={IMAGES.contactHero.src}
+                  src="/team.png"
                   alt="Consult Dr B"
                   fill
                   className="object-cover object-top"

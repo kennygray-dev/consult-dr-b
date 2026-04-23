@@ -52,7 +52,7 @@ export default function Footer() {
                 />
               </Link>
 
-              <div className="flex flex-wrap items-center gap-y-1 text-sm text-black/55">
+              <div className="flex items-center text-sm text-black/55 whitespace-nowrap">
                 <MapPin size={14} className="text-black/40 mr-2 shrink-0" />
                 {LOCATIONS.map((loc, i) => (
                   <span key={loc} className="flex items-center">
@@ -74,11 +74,11 @@ export default function Footer() {
                 Trusted laboratory partners
               </p>
 
-              <div className="flex items-center gap-5 flex-wrap">
-                <div className="relative h-14 w-32">
+              <div className="flex items-center gap-5 flex-nowrap">
+                <div className="relative h-16 w-40">
                   <Image src="/partners/synlab.png" alt="Synlab" fill className="object-contain object-left" />
                 </div>
-                <div className="relative h-16 w-40">
+                <div className="relative h-20 w-48">
                   <Image src="/partners/aurum1.png" alt="Aurum Concierge Medical" fill className="object-contain" />
                 </div>
                 <div className="relative h-16 w-32 border border-black/10 rounded p-1">
@@ -163,11 +163,11 @@ export default function Footer() {
             Trusted laboratory partners
           </p>
 
-          <div className="flex items-center gap-5 flex-wrap">
-            <div className="relative h-14 w-32">
+          <div className="flex items-center gap-5 flex-nowrap">
+            <div className="relative h-16 w-40">
               <Image src="/partners/synlab.png" alt="Synlab" fill className="object-contain" />
             </div>
-            <div className="relative h-16 w-40">
+            <div className="relative h-20 w-48">
               <Image src="/partners/aurum1.png" alt="Aurum Concierge Medical" fill className="object-contain" />
             </div>
             <div className="relative h-16 w-32 border border-black/10 rounded p-1">
