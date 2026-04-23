@@ -2,7 +2,7 @@
 
 import { IMAGES } from "@/lib/images";
 // metadata removed because this is now a client component
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Instagram } from "lucide-react";
 import { PageHero, SectionHeader } from "@/components/ui";
 import { CONTACT_INFO } from "@/lib/constants";
 import Image from "next/image";
@@ -137,6 +137,23 @@ export default function ContactPage() {
                     <p className="text-xs text-secondary font-semibold tracking-widest uppercase">Email</p>
                     <a href={`mailto:${CONTACT_INFO.email}`} className="text-gray-700 mt-0.5 underline">
                       {CONTACT_INFO.email}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 bg-primary flex items-center justify-center shrink-0">
+                    <Instagram size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-secondary font-semibold tracking-widest uppercase">Instagram</p>
+                    <a
+                      href="https://instagram.com/elitemededu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 mt-0.5 underline"
+                    >
+                      @elitemededu
                     </a>
                   </div>
                 </div>

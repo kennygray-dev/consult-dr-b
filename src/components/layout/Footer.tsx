@@ -145,7 +145,9 @@ export default function Footer() {
             </h4>
 
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/elitemededu"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2.5 text-sm text-black/55 hover:text-secondary"
             >
               <Instagram size={15} />

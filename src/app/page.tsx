@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -46,20 +47,24 @@ export default function HomePage() {
       {/* ── Hero ── */}
       {/* ── Hero ── */}
 <section className="relative min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
-        <Image
-          src={IMAGES.homeHero.src}
-          alt={IMAGES.homeHero.alt}
-          fill
-          priority
-          sizes="100vw"
-          quality={85}
-          className="object-cover object-center"
-          placeholder="blur"
-          blurDataURL={IMAGES.homeHero.blurDataURL}
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+          <video
+            src="/Video11.mp4"
+            autoPlay
+            muted
+            playsInline
+            loop
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
 
-        {/* Reduced darkness */}
-        <div className="absolute inset-0 bg-black/15" />
+        {/* Darker darkness */}
+        <div className="absolute inset-0 bg-black/50" />
 
         <div className="section-container relative z-10 py-16 sm:py-24">
           <motion.div

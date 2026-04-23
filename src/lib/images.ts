@@ -69,7 +69,7 @@ export const IMAGES = {
     height: 1080,
   },
   serviceAssessment: {
-    src: "/wellness-specialized.png",
+    src: "/wellness-specialized1.png",
     alt: "Wellness and specialized medical care consultation",
     blurDataURL: PRIMARY_BLUR,
     width: 900,
