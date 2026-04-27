@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { useRef, useEffect } from "react";
 import { IMAGES } from "@/lib/images";
 
 import Reveal from "@/components/ui/Reveal";
@@ -41,24 +41,50 @@ const FAQ_ITEMS = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Ensure seamless looping: when the video ends, jump back to 0 and play
+  // This avoids any inter-loop gap that the native `loop` attribute can introduce
+  // on some browsers/codecs.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleEnded = () => {
+      video.currentTime = 0;
+      video.play().catch(() => {
+        // Autoplay blocked — silently ignore
+      });
+    };
+
+    video.addEventListener("ended", handleEnded);
+    return () => video.removeEventListener("ended", handleEnded);
+  }, []);
+
   return (
     <>
       {/* ── Hero ── */}
-      {/* ── Hero ── */}
-<section className="relative min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
         <div className="absolute inset-0">
           <video
-            src="/Video11.mp4"
+            ref={videoRef}
+            src="/Human-body-hero.mp4"
             autoPlay
             muted
             playsInline
             loop
+            // preload="auto" tells the browser to fully buffer the video on
+            // first load so subsequent visits (and loop restarts) are instant.
+            preload="auto"
+            // will-change hints the GPU to keep the decoded frames ready,
+            // preventing a black flash at the loop boundary.
+            style={{ willChange: "transform" }}
             className="w-full h-full object-cover object-center"
           />
         </div>
 
-        {/* Darker darkness */}
-        <div className="absolute inset-0 bg-black/75" />
+        {/* Overlay — reduced from /75 to /55 for a lighter, more luminous feel */}
+        <div className="absolute inset-0 bg-black/55" />
 
         <div className="section-container relative z-10 py-16 sm:py-24">
           <motion.div
@@ -67,21 +93,21 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Optimized Heading */}
             <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl text-white leading-tight sm:leading-snug">
-              Consult Dr B International<br />concierge Medical Services
+              Consult Dr B International
+              <br />
+              Concierge Medical Services
             </h1>
 
-            {/* Optimized Paragraph */}
             <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-md sm:max-w-xl mx-auto text-center font-light">
-              Luxury medical care, research evidence-based<br />
+              Luxury medical care, research evidence-based
+              <br />
               precision medicine, visible results
             </p>
 
-            {/* Optimized Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center border border-white text-white bg-transparent hover:bg-white/10 px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-md mx-auto"
+              className="inline-flex items-center gap-2 justify-center border border-white text-white bg-transparent hover:bg-white/10 transition-colors px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-md mx-auto"
             >
               Book Consultation <ArrowRight size={16} />
             </Link>
