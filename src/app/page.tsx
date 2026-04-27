@@ -84,7 +84,7 @@ export default function HomePage() {
         </div>
 
         {/* Overlay — reduced from /75 to /55 for a lighter, more luminous feel */}
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/65" />
 
         <div className="section-container relative z-10 py-16 sm:py-24">
           <motion.div
