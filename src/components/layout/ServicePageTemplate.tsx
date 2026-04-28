@@ -115,6 +115,49 @@ export default function ServicePageTemplate({
         blurDataURL={hero.blurDataURL}
       />
 
+      {/* ── Learn About Other Services (Carousel under Hero) ── */}
+      {relatedServices && relatedServices.length > 0 && (
+        <section className="py-16 bg-[#F3F3F3]">
+          <div className="section-container space-y-6">
+
+            <h2 className="font-heading text-2xl text-black">
+              Learn About Other Programs
+            </h2>
+
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2">
+
+              {relatedServices.map((svc) => (
+                <Link
+                  key={svc.href}
+                  href={svc.href}
+                  className="group relative shrink-0 w-[280px] md:w-[360px] h-[360px] overflow-hidden snap-start block rounded-xl"
+                >
+                  <Image
+                    src={svc.image}
+                    alt={svc.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
+                    <p className="text-white text-sm font-heading leading-snug">
+                      {svc.label}
+                    </p>
+
+                    <span className="inline-flex items-center gap-1 border border-white text-white text-xs px-3 py-1.5 group-hover:bg-white group-hover:text-primary transition-colors">
+                      Learn More <ArrowRight size={11} />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── Approach (white bg) ── */}
       <section className="py-10 bg-white">
         <div className="section-container grid lg:grid-cols-2 gap-16 items-center">
@@ -260,42 +303,6 @@ export default function ServicePageTemplate({
   backgroundImage={cta.backgroundImage}
   backgroundImageAlt={cta.backgroundImageAlt}
 />
-
-      {/* ── Learn About Other Services (#F3F3F3 bg, square-ish cards) ── */}
-      {relatedServices && relatedServices.length > 0 && (
-        <section className="py-24" style={{ backgroundColor: "#F3F3F3" }}>
-          <div className="section-container space-y-10">
-            <h2 className="font-heading text-2xl text-black text-center">
-              Learn About Other Programs
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-              {relatedServices.map((svc) => (
-                <Link
-                  key={svc.href}
-                  href={svc.href}
-                  className="group relative aspect-square overflow-hidden block"
-                >
-                  <Image
-                    src={svc.image}
-                    alt={svc.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
-                    <p className="text-white text-sm font-heading leading-snug">
-                      {svc.label}
-                    </p>
-                    <span className="inline-flex items-center gap-1 border border-white text-white text-xs px-3 py-1.5 group-hover:bg-white group-hover:text-primary transition-colors">
-                      Learn More <ArrowRight size={11} />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
     </>
   );
 }

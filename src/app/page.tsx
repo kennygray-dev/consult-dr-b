@@ -171,7 +171,7 @@ export default function HomePage() {
     href="/contact"
     className="inline-flex items-center gap-2 justify-center border border-white text-white bg-transparent hover:bg-white/10 transition-colors px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-md"
   >
-    Book Consultation <ArrowRight size={16} />
+    Get In Touch <ArrowRight size={16} />
   </Link>
 </motion.div>
           </motion.div>
