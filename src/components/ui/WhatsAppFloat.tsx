@@ -82,11 +82,11 @@ export default function WhatsAppFloat(): JSX.Element {
 
           <div className="grid grid-cols-1 gap-1">
             {[
-              "Metabolic and Weight",
-              "Regenerative and Cellular",
-              "Advanced Longevity and Performance",
-              "Aesthetical and Skin",
-              "Wellness and Specialized",
+              "Metabolic and Weight Optimization",
+              "Regenerative and Cellular Medicine",
+              "Advanced Longevity and Performance Medicine",
+              "Aesthetics and Skin Medicine",
+              "Specialized Wellness Programs",
               "Post-Surgical Recovery and Wound Healing",
             ].map((service) => (
               <button

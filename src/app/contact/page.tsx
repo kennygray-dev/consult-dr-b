@@ -16,11 +16,11 @@ const waHref = `https://wa.me/${phone}?text=${waMessage}`;
 
 export default function ContactPage() {
   const services = [
-    "Metabolic and Weight",
-    "Regenerative and Cellular",
-    "Advanced Longevity and Performance",
-    "Aesthetics and Skin",
-    "Wellness and Specialized",
+    "Metabolic and Weight Optimization",
+    "Regenerative and Cellular Medicine",
+    "Advanced Longevity and Performance Medicine",
+    "Aesthetics and Skin Medicine",
+    "Specialized Wellness Programs",
     "Post-Surgical Recovery and Wound Healing",
   ];
 

@@ -5,11 +5,11 @@ import { Instagram, MapPin } from "lucide-react";
 import { SITE_NAME } from "@/lib/constants";
 
 const SERVICES_LINKS = [
-  { label: "Metabolic & Weight", href: "/services/metabolic-weight" },
-  { label: "Regenerative & Cellular", href: "/services/regenerative-cellular" },
+  { label: "Metabolic & Weight Optimization", href: "/services/metabolic-weight-optimization" },
+  { label: "Regenerative & Cellular Medicine", href: "/services/regenerative-cellular-medicine" },
   { label: "Advanced Longevity & Performance Medicine", href: "/services/longevity-performance" },
-  { label: "Aesthetics & Skin", href: "/services/aesthetics-skin" },
-  { label: "Wellness & Specialized", href: "/services/wellness-specialized" },
+  { label: "Aesthetics & Skin Medicine", href: "/services/aesthetics-skin-medicine" },
+  { label: "Specialized Wellness Programs", href: "/services/specialized-wellness-programs" },
   { label: "Post-Surgical Recovery & Wound Healing", href: "/services/post-surgical-recovery" },
 ];
 

@@ -115,7 +115,7 @@ export default function MetabolicWeightPage() {
 
       relatedServices={[
         {
-          href: "/services/regenerative-cellular",
+          href: "/services/regenerative-cellular-medicine",
           image: IMAGES.serviceHormone.src,
           imageAlt: "Regenerative & Cellular Medicine",
           label: "Regenerative & Cellular Medicine",
@@ -127,7 +127,7 @@ export default function MetabolicWeightPage() {
           label: "Longevity & Performance Medicine",
         },
         {
-          href: "/services/aesthetics-skin",
+          href: "/services/aesthetics-skin-medicine",
           image: IMAGES.serviceAestheticSkin.src,
           imageAlt: "Aesthetic & Skin Medicine",
           label: "Aesthetic & Skin Medicine",
@@ -139,7 +139,7 @@ export default function MetabolicWeightPage() {
     label: "Post-Surgical Recovery & Wound Healing",
   },
          {
-          href: "/services/wellness-specialized",
+          href: "/services/specialized-wellness-programs",
           image: IMAGES.serviceAssessment.src,
           imageAlt: "Specialized Wellness Programs",
           label: "Specialized Wellness Programs",

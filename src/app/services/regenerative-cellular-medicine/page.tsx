@@ -157,20 +157,20 @@ export default function RegenerativeCellularPage() {
       // ── Related Services ──────────────────────────────────────────────
       relatedServices={[
   {
-    href: "/services/metabolic-weight",
+    href: "/services/metabolic-weight-optimization",
     image: IMAGES.serviceMetabolic.src,
     imageAlt: "Metabolic & Weight Optimization",
     label: "Metabolic & Weight Optimization",
   },
 
   {
-    href: "/services/longevity-performance",
+    href: "/services/longevity-performance-medicine",
     image: IMAGES.serviceLongevity.src,
     imageAlt: "Longevity & Performance Medicine",
     label: "Longevity & Performance Medicine",
   },
   {
-    href: "/services/aesthetics-skin",
+    href: "/services/aesthetics-skin-medicine",
     image: IMAGES.serviceAestheticSkin.src,
     imageAlt: "Aesthetic & Skin Medicine",
     label: "Aesthetic & Skin Medicine",
@@ -182,7 +182,7 @@ export default function RegenerativeCellularPage() {
     label: "Post-Surgical Recovery & Wound Healing",
   },
   {
-    href: "/services/wellness-specialized",
+    href: "/services/wellness-specialized-programs",
     image: IMAGES.serviceAssessment.src,
     imageAlt: "Specialized Wellness Programs",
     label: "Specialized Wellness Programs",

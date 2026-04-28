@@ -177,13 +177,13 @@ export default function PostSurgicalRecoveryPage() {
           label: "Longevity & Performance Medicine",
         },
         {
-          href: "/services/aesthetics-skin",
+          href: "/services/aesthetics-skin-medicine",
           image: IMAGES.serviceAestheticSkin.src,
           imageAlt: "Aesthetic & Skin Medicine",
           label: "Aesthetic & Skin Medicine",
         },
          {
-          href: "/services/wellness-specialized",
+          href: "/services/specialized-wellness-programs",
           image: IMAGES.serviceAssessment.src,
           imageAlt: "Specialized Wellness Programs",
           label: "Specialized Wellness Programs",
