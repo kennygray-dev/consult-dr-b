@@ -164,7 +164,7 @@ export default function RegenerativeCellularPage() {
   },
 
   {
-    href: "/services/longevity-performance-medicine",
+    href: "/services/longevity-performance",
     image: IMAGES.serviceLongevity.src,
     imageAlt: "Longevity & Performance Medicine",
     label: "Longevity & Performance Medicine",
@@ -182,7 +182,7 @@ export default function RegenerativeCellularPage() {
     label: "Post-Surgical Recovery & Wound Healing",
   },
   {
-    href: "/services/wellness-specialized-programs",
+    href: "/services/specialized-wellness-programs",
     image: IMAGES.serviceAssessment.src,
     imageAlt: "Specialized Wellness Programs",
     label: "Specialized Wellness Programs",

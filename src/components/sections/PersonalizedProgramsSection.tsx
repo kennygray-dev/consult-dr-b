@@ -8,7 +8,7 @@ import Reveal from "@/components/ui/Reveal";
 
 const SERVICES = [
   {
-    href: "/services/metabolic-weight",
+    href: "/services/metabolic-weight-optimization",
     image: IMAGES.serviceMetabolic.src,
     imageAlt: "Metabolic & Weight Optimization",
     title: "Metabolic & Weight Optimization",
@@ -22,21 +22,21 @@ const SERVICES = [
     tags: ["NAD+ therapy", "Mitochondrial optimization", "Anti-aging protocols", "Hormone optimisation", "Long-term health planning"],
   },
   {
-    href: "/services/wellness-specialized",
+    href: "/services/specialized-wellness-programs",
     image: IMAGES.serviceAssessment.src,
     imageAlt: "Wellness & Specialized Care",
-    title: "Wellness & Specialized Care",
+    title: "Specialized Wellness Programs",
     tags: ["Preventive care", "Holistic optimisation", "Lifestyle medicine"],
   },
   {
-    href: "/services/regenerative-cellular",
+    href: "/services/regenerative-cellular-medicine",
     image: IMAGES.serviceHormone.src,
     imageAlt: "Regenerative & Cellular Medicine",
     title: "Regenerative & Cellular Medicine",
     tags: ["Peptide protocols", "Cellular repair", "Bioregeneration"],
   },
   {
-    href: "/services/aesthetics-skin",
+    href: "/services/aesthetics-skin-medicine",
     image: IMAGES.serviceAestheticSkin.src,
     imageAlt: "Aesthetic & Skin Medicine",
     title: "Aesthetic & Skin Medicine",
