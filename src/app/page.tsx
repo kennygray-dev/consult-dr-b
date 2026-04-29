@@ -177,10 +177,10 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
+<PersonalizedProgramsSection />
       <PrecisionMedicineSection />
+      
       <MissionBannerSection />
-      <PersonalizedProgramsSection />
       <WhyChooseSection />
       <IntegratedNutritionalCareSection />
       <PeptideBioregulationSection />

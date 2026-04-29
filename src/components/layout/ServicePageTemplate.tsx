@@ -115,48 +115,6 @@ export default function ServicePageTemplate({
         blurDataURL={hero.blurDataURL}
       />
 
-      {/* ── Learn About Other Services (Carousel under Hero) ── */}
-      {relatedServices && relatedServices.length > 0 && (
-        <section className="py-16 bg-[#F3F3F3]">
-          <div className="section-container space-y-6">
-
-            <h2 className="font-heading text-2xl text-black">
-              Learn About Other Programs
-            </h2>
-
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2">
-
-              {relatedServices.map((svc) => (
-                <Link
-                  key={svc.href}
-                  href={svc.href}
-                  className="group relative shrink-0 w-[280px] md:w-[360px] h-[360px] overflow-hidden snap-start block rounded-xl"
-                >
-                  <Image
-                    src={svc.image}
-                    alt={svc.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
-
-                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
-                    <p className="text-white text-sm font-heading leading-snug">
-                      {svc.label}
-                    </p>
-
-                    <span className="inline-flex items-center gap-1 border border-white text-white text-xs px-3 py-1.5 group-hover:bg-white group-hover:text-primary transition-colors">
-                      Learn More <ArrowRight size={11} />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── Approach (white bg) ── */}
       <section className="py-10 bg-white">
@@ -293,6 +251,49 @@ export default function ServicePageTemplate({
 
       {/* ── FAQ (#F3F3F3 bg) ── */}
  {faq?.items?.length ? <FAQSection items={faq.items} /> : null}
+
+      {/* ── Learn About Other Services (Carousel under Hero) ── */}
+      {relatedServices && relatedServices.length > 0 && (
+        <section className="py-16 bg-[#F3F3F3]">
+          <div className="section-container space-y-6">
+
+            <h2 className="font-heading text-2xl text-black">
+              Learn About Other Programs
+            </h2>
+
+            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2">
+
+              {relatedServices.map((svc) => (
+                <Link
+                  key={svc.href}
+                  href={svc.href}
+                  className="group relative shrink-0 w-[280px] md:w-[360px] h-[360px] overflow-hidden snap-start block rounded-xl"
+                >
+                  <Image
+                    src={svc.image}
+                    alt={svc.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
+                    <p className="text-white text-sm font-heading leading-snug">
+                      {svc.label}
+                    </p>
+
+                    <span className="inline-flex items-center gap-1 border border-white text-white text-xs px-3 py-1.5 group-hover:bg-white group-hover:text-primary transition-colors">
+                      Learn More <ArrowRight size={11} />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── CTA Banner (image bg + blue rectangle) ── */}
     <CTABanner
