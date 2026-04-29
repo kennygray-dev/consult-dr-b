@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, Plus, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 import { PageHero } from "@/components/ui";
 import Reveal from "@/components/ui/Reveal";
 import FAQSection from "@/components/sections/FAQSection";
@@ -104,6 +107,17 @@ export default function ServicePageTemplate({
   cta,
   relatedServices,
 }: ServicePageProps) {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+
+    const amount = 400;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       {/* ── Hero ── */}
@@ -250,38 +264,60 @@ export default function ServicePageTemplate({
       {/* ── Learn About Other Services ── */}
       {relatedServices && relatedServices.length > 0 && (
         <section className="py-16 bg-[#F3F3F3]">
-          <div className="section-container space-y-6">
+          <div className="section-container space-y-6 relative">
             <h2 className="font-heading text-2xl text-black">
               Learn About Other Programs
             </h2>
 
-            <div className="grid grid-cols-2 gap-3 md:flex md:gap-4 md:overflow-x-auto md:snap-x md:snap-mandatory md:scroll-smooth md:pb-2">
-              {relatedServices.map((svc) => (
-                <Link
-                  key={svc.href}
-                  href={svc.href}
-                  className="group relative w-full h-[180px] md:shrink-0 md:w-[360px] md:h-[360px] overflow-hidden md:snap-start block rounded-xl"
-                >
-                  <Image
-                    src={svc.image}
-                    alt={svc.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+            <div className="relative">
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+              {/* Left Arrow */}
+              <button
+                onClick={() => scroll("left")}
+                className="hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-black p-2 rounded-full shadow"
+              >
+                <ChevronLeft size={18} />
+              </button>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
-                    <p className="text-white text-sm font-heading leading-snug">
-                      {svc.label}
-                    </p>
+              {/* Right Arrow */}
+              <button
+                onClick={() => scroll("right")}
+                className="hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-black p-2 rounded-full shadow"
+              >
+                <ChevronRight size={18} />
+              </button>
 
-                    <span className="inline-flex items-center gap-1 border border-white text-white text-xs px-3 py-1.5 group-hover:bg-white group-hover:text-primary transition-colors">
-                      Learn More <ArrowRight size={11} />
-                    </span>
-                  </div>
-                </Link>
-              ))}
+              <div
+                ref={scrollRef}
+                className="grid grid-cols-2 gap-3 md:flex md:gap-4 md:overflow-x-auto md:snap-x md:snap-mandatory md:scroll-smooth md:pb-2"
+              >
+                {relatedServices.map((svc) => (
+                  <Link
+                    key={svc.href}
+                    href={svc.href}
+                    className="group relative w-full h-[180px] md:shrink-0 md:w-[360px] md:h-[360px] overflow-hidden md:snap-start block rounded-xl"
+                  >
+                    <Image
+                      src={svc.image}
+                      alt={svc.imageAlt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+
+                    <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
+                      <p className="text-white text-sm font-heading leading-snug">
+                        {svc.label}
+                      </p>
+
+                      <span className="inline-flex items-center gap-1 border border-white text-white text-xs px-3 py-1.5 group-hover:bg-white group-hover:text-primary transition-colors">
+                        Learn More <ArrowRight size={11} />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

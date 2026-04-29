@@ -6,10 +6,10 @@ import Reveal from "@/components/ui/Reveal";
 export default function PrecisionMedicineSection() {
   return (
     <section className="relative py-24 overflow-hidden bg-white">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(59,130,246,0.045),_transparent_42%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.035),_transparent_40%)]" />
+      <div className="absolute inset-0 pointer-events-none animate-[pulse_12s_ease-in-out_infinite]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(59,130,246,0.09),_transparent_42%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.08),_transparent_40%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0)_0%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0.7)_78%,_rgba(255,255,255,1)_100%)]" />
-        <div className="absolute inset-0 opacity-[0.018] [background-image:linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] [background-size:56px_56px]" />
+        <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] [background-size:56px_56px]" />
       </div>
       <div className="relative section-container text-center max-w-3xl mx-auto space-y-6">
         <Reveal>
