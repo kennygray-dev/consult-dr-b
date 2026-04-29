@@ -115,7 +115,6 @@ export default function ServicePageTemplate({
         blurDataURL={hero.blurDataURL}
       />
 
-
       {/* ── Approach (white bg) ── */}
       <section className="py-10 bg-white">
         <div className="section-container grid lg:grid-cols-2 gap-16 items-center">
@@ -218,8 +217,8 @@ export default function ServicePageTemplate({
       </section>
 
       {/* ── Personalised Plan (image bg) ── */}
-<section className="relative py-32 min-h-[700px] overflow-hidden">        
-    <div className="absolute inset-0 z-0">
+      <section className="relative py-32 min-h-[700px] overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <Image
             src={plan.backgroundImage}
             alt={plan.backgroundImageAlt}
@@ -249,25 +248,23 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      {/* ── FAQ (#F3F3F3 bg) ── */}
- {faq?.items?.length ? <FAQSection items={faq.items} /> : null}
+      {/* ── FAQ ── */}
+      {faq?.items?.length ? <FAQSection items={faq.items} /> : null}
 
-      {/* ── Learn About Other Services (Carousel under Hero) ── */}
+      {/* ── Learn About Other Services ── */}
       {relatedServices && relatedServices.length > 0 && (
         <section className="py-16 bg-[#F3F3F3]">
           <div className="section-container space-y-6">
-
             <h2 className="font-heading text-2xl text-black">
               Learn About Other Programs
             </h2>
 
-            <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2">
-
+            <div className="grid grid-cols-2 gap-3 md:flex md:gap-4 md:overflow-x-auto md:snap-x md:snap-mandatory md:scroll-smooth md:pb-2">
               {relatedServices.map((svc) => (
                 <Link
                   key={svc.href}
                   href={svc.href}
-                  className="group relative shrink-0 w-[280px] md:w-[360px] h-[360px] overflow-hidden snap-start block rounded-xl"
+                  className="group relative w-full h-[180px] md:shrink-0 md:w-[360px] md:h-[360px] overflow-hidden md:snap-start block rounded-xl"
                 >
                   <Image
                     src={svc.image}
@@ -289,21 +286,20 @@ export default function ServicePageTemplate({
                   </div>
                 </Link>
               ))}
-
             </div>
           </div>
         </section>
       )}
 
-      {/* ── CTA Banner (image bg + blue rectangle) ── */}
-    <CTABanner
-  title={cta.title}
-  subtitle={cta.subtitle}
-  buttonText={cta.buttonText}
-  buttonHref={cta.buttonHref}
-  backgroundImage={cta.backgroundImage}
-  backgroundImageAlt={cta.backgroundImageAlt}
-/>
+      {/* ── CTA Banner ── */}
+      <CTABanner
+        title={cta.title}
+        subtitle={cta.subtitle}
+        buttonText={cta.buttonText}
+        buttonHref={cta.buttonHref}
+        backgroundImage={cta.backgroundImage}
+        backgroundImageAlt={cta.backgroundImageAlt}
+      />
     </>
   );
 }
