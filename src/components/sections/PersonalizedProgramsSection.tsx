@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { IMAGES } from "@/lib/images";
 
 const SERVICES = [
@@ -52,6 +52,17 @@ const SERVICES = [
 ];
 
 export default function PersonalizedProgramsSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -101,20 +112,9 @@ export default function PersonalizedProgramsSection() {
             className="flex gap-4 md:gap-5 overflow-x-auto overflow-y-hidden pb-3 -mx-4 px-3 sm:px-4 snap-x snap-mandatory scrollbar-hide scroll-smooth"
           >
             {SERVICES.map((svc, i) => (
-              <motion.div
-                key={svc.href}
-                initial={{ opacity: 0, y: 30, scale: 0.92 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.6 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 18,
-                  delay: i * 0.06
-                }}
-                whileHover={{ scale: 1.03 }}
-              >
+              isMobile ? (
                 <Link
+                  key={svc.href}
                   href={svc.href}
                   className="group relative shrink-0 w-[280px] sm:w-[340px] md:w-[420px] h-[360px] sm:h-[400px] md:h-[440px] overflow-hidden snap-start block rounded-xl"
                 >
@@ -148,7 +148,56 @@ export default function PersonalizedProgramsSection() {
                     </span>
                   </div>
                 </Link>
-              </motion.div>
+              ) : (
+                <motion.div
+                  key={svc.href}
+                  initial={{ opacity: 0, y: 30, scale: 0.92 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: false, amount: 0.6 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 18,
+                    delay: i * 0.06
+                  }}
+                  whileHover={{ scale: 1.03 }}
+                >
+                  <Link
+                    href={svc.href}
+                    className="group relative shrink-0 w-[280px] sm:w-[340px] md:w-[420px] h-[360px] sm:h-[400px] md:h-[440px] overflow-hidden snap-start block rounded-xl"
+                  >
+                    <Image
+                      src={svc.image}
+                      alt={svc.imageAlt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
+
+                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 space-y-3">
+                      <h3 className="font-heading text-white text-base sm:text-lg leading-snug">
+                        {svc.title}
+                      </h3>
+
+                      <div className="flex flex-wrap gap-1.5">
+                        {svc.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-white/70 text-[10px] sm:text-xs border border-white/20 px-2 py-0.5"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <span className="inline-flex items-center gap-1 text-white text-xs mt-1">
+                        Learn More <ArrowRight size={11} />
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              )
             ))}
           </div>
         </div>
