@@ -2,9 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import { IMAGES } from "@/lib/images";
-import Reveal from "@/components/ui/Reveal";
 
 const SERVICES = [
   {
@@ -67,17 +67,13 @@ export default function PersonalizedProgramsSection() {
     <section className="py-24" style={{ backgroundColor: "#F8F4EA" }}>
       <div className="section-container space-y-4">
         <div className="grid lg:grid-cols-2 gap-8 items-end mb-12">
-          <Reveal>
-            <h2 className="font-heading text-3xl text-black leading-tight">
-              Personalized Programs for<br />Health Optimization
-            </h2>
-          </Reveal>
+          <h2 className="font-heading text-3xl text-black leading-tight">
+            Personalized Programs for<br />Health Optimization
+          </h2>
 
-          <Reveal delay={0.1}>
-            <p className="text-gray-500 leading-relaxed">
-              Our programs provide advanced medical services, precise diagnostics, and clinical programs designed to optimise long-term health and performance.
-            </p>
-          </Reveal>
+          <p className="text-gray-500 leading-relaxed">
+            Our programs provide advanced medical services, precise diagnostics, and clinical programs designed to optimise long-term health and performance.
+          </p>
         </div>
 
         {/* ── Scroll Area ── */}
@@ -105,7 +101,19 @@ export default function PersonalizedProgramsSection() {
             className="flex gap-4 md:gap-5 overflow-x-auto overflow-y-hidden pb-3 -mx-4 px-3 sm:px-4 snap-x snap-mandatory scrollbar-hide scroll-smooth"
           >
             {SERVICES.map((svc, i) => (
-              <Reveal key={svc.href} delay={i * 0.08}>
+              <motion.div
+                key={svc.href}
+                initial={{ opacity: 0, y: 30, scale: 0.92 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 18,
+                  delay: i * 0.06
+                }}
+                whileHover={{ scale: 1.03 }}
+              >
                 <Link
                   href={svc.href}
                   className="group relative shrink-0 w-[280px] sm:w-[340px] md:w-[420px] h-[360px] sm:h-[400px] md:h-[440px] overflow-hidden snap-start block rounded-xl"
@@ -140,7 +148,7 @@ export default function PersonalizedProgramsSection() {
                     </span>
                   </div>
                 </Link>
-              </Reveal>
+              </motion.div>
             ))}
           </div>
         </div>
