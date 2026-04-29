@@ -182,10 +182,6 @@ export default function ServicePageTemplate({
                 </span>
               ))}
             </div>
-
-            <Link href="/contact" className="btn-gold inline-flex">
-              Book a Consultation <ArrowRight size={15} />
-            </Link>
           </div>
         </Reveal>
       </section>

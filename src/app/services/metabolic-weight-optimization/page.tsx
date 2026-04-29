@@ -107,7 +107,7 @@ export default function MetabolicWeightPage() {
 
       cta={{
         title: "Start Your Metabolic Transformation",
-        subtitle: "Book a consultation to begin a personalized, medically guided program designed for sustainable results.",
+        subtitle: "Contact our team to begin a personalized, medically guided program designed for sustainable results.",
         buttonText: "Contact Our Team",
         backgroundImage: IMAGES.servicesHero.src,
         backgroundImageAlt: IMAGES.servicesHero.alt,

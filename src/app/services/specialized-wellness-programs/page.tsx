@@ -145,7 +145,7 @@ export default function SpecializedWellnessPage() {
       cta={{
         title: "Enhance Your Natural Appearance",
         subtitle:
-          "Book a consultation to begin a personalised aesthetic treatment plan.",
+          "Contact our team to begin a personalised aesthetic treatment plan.",
         buttonText: "Contact Our Team",
         backgroundImage: IMAGES.servicesHero.src,
         backgroundImageAlt: IMAGES.servicesHero.alt,
