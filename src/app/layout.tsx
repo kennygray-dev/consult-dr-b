@@ -41,19 +41,19 @@ export const metadata: Metadata = {
     "World-class medical consulting, personalised programs, nutrition, peptide therapy, and coaching — led by Dr B.",
   keywords: ["medical consulting", "peptide therapy", "nutrition", "health coaching", "precision medicine"],
   openGraph: {
-    title: "Consult Dr B",
-    description: "Precision Medicine. Personalised Care.",
-    type: "website",
-    url: "https://www.consultdrb.com",
-    images: [
-      {
-        url: "https://www.consultdrb.com/consultdrb.png",
-        width: 1200,
-        height: 630,
-        alt: "Consult Dr B",
-      },
-    ],
-  },
+  title: "Consult Dr B",
+  description: "Precision Medicine. Personalised Care.",
+  type: "website",
+  url: "https://www.consultdrbintl.com",
+  images: [
+    {
+      url: "https://www.consultdrbintl.com/consultdrb.png",
+      width: 1200,
+      height: 630,
+      alt: "Consult Dr B",
+    },
+  ],
+},
   icons: {
     icon: "/favicon1.ico",
     apple: "/apple-touch-icon.png",
