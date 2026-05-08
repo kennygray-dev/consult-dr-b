@@ -44,6 +44,15 @@ export const metadata: Metadata = {
     title: "Consult Dr B",
     description: "Precision Medicine. Personalised Care.",
     type: "website",
+    url: "https://www.consultdrb.com",
+    images: [
+      {
+        url: "https://www.consultdrb.com/consultdrb.png",
+        width: 1200,
+        height: 630,
+        alt: "Consult Dr B",
+      },
+    ],
   },
   icons: {
     icon: "/favicon1.ico",
