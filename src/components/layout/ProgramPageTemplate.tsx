@@ -145,17 +145,29 @@ export default function ProgramPageTemplate({
       </div>
     </Reveal>
 
-    {/* REPLACE the old image div with this */}
     <Reveal delay={0.1}>
-  <div className="relative w-full max-w-sm aspect-[3/4] overflow-hidden rounded-2xl mx-auto">
-    <Image
-      src={IMAGES.coachHero.src}
-      alt={specialist.doctor.imageAlt}
-      fill
-      className="object-cover object-top"
-    />
-  </div>
-</Reveal>
+      <div className="relative w-full max-w-sm mx-auto pb-16">
+        {/* Main image */}
+        <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl z-10">
+          <Image
+            src={IMAGES.coachHero.src}
+            alt={specialist.doctor.imageAlt}
+            fill
+            className="object-cover object-top"
+          />
+        </div>
+
+        {/* Floating smaller image */}
+        <div className="absolute -bottom-2 -right-2 w-40 sm:w-48 aspect-[4/5] rounded-2xl overflow-hidden border border-white/20 shadow-2xl z-20 bg-white">
+          <Image
+            src="/owenfit.png"
+            alt="Owen Fit"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </Reveal>
 
   </div>
 </section>

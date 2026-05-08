@@ -32,7 +32,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <p className="text-secondary text-xs uppercase tracking-widest">Fastest Response</p>
               <h2 className="font-heading text-4xl lg:text-5xl text-primary leading-tight">
-                Discreet. Responsive. Personalized.
+                Private. Responsive. Personalized.
               </h2>
               <p className="text-gray-500 text-base leading-relaxed">
                 For the fastest response, connect with us directly via WhatsApp.

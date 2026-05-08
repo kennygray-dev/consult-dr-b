@@ -220,7 +220,7 @@ export const IMAGES = {
 
   // Partnership
   partnershipHero: {
-    src: "/partnership.png",
+    src: "/clinic.jpg",
     alt: "Corporate wellness partnership team meeting",
     blurDataURL: PRIMARY_BLUR,
     width: 1920,

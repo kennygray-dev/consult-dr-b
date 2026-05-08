@@ -67,7 +67,7 @@ export default function EliteAestheticPartnerPage() {
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-none bg-[#E8F0F8] flex items-center justify-center">
             <Image
-              src="/elite-aesthetic-hero.png"
+              src={IMAGES.partnershipHero.src}
               alt="Elite Aesthetic Medical Partner Program"
               fill
               className="object-cover object-center"
@@ -95,7 +95,7 @@ export default function EliteAestheticPartnerPage() {
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src="/physician-guided.png"
+              src="/physician-guided2.png"
               alt="Physician-guided aesthetic care"
               fill
               className="object-cover object-center"

@@ -184,8 +184,9 @@ export default function HomePage() {
       <WhyChooseSection />
       <IntegratedNutritionalCareSection />
       <PeptideBioregulationSection />
-      <EliteAestheticMedicalPartnerSection />
+     
       <ExecutivePerformanceSection />
+       <EliteAestheticMedicalPartnerSection />
 
       {/* ── FAQ ── */}
       <section className="py-24 bg-white">

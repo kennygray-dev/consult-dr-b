@@ -14,7 +14,7 @@ const TEAM = [
   { name: "Dr. Ruqayyah Ibrahim", role: "MD", credentials: "UAE 🇦🇪 / Great Britain 🇬🇧 / Nigeria 🇳🇬", bio: "", image: { src: "/ruqayyah.png", alt: "Dr. Ruqayyah Ibrahim portrait" } },
   { name: "Dr. Imaiker Theresa J", role: "MD (Consultant Endocrinologist - International)", credentials: "Russia 🇷🇺", bio: "", image: { src: "/imaiker.png", alt: "Dr. Imaiker Theresa J portrait" } },
   { name: "Dr. Gideon Botchey", role: "MD", credentials: "Russia 🇷🇺 / Ghana 🇬🇭", bio: "", image: { src: "/gideon.png", alt: "Dr. Gideon Botchey portrait" } },
-  { name: "Dr. Abieyuwa Oshodin", role: "MBBS / MD", credentials: "Nigeria 🇳🇬", bio: "", image: { src: "/abieyuwa.jpg", alt: "Dr. Abieyuwa Oshodin portrait" } },
+  { name: "Dr. Abieyuwa Oshodin", role: "MBBS / MD", credentials: "Nigeria 🇳🇬 / USA 🇺🇸", bio: "", image: { src: "/abieyuwa.jpg", alt: "Dr. Abieyuwa Oshodin portrait" } },
   { name: "Dr. Lobeswaran", role: "MD", credentials: "Russia 🇷🇺 / India 🇮🇳", bio: "", image: { src: "/lobeswaran.jpg", alt: "Dr. Lobeswaran portrait" } },
   { name: "Dr. Iyanuolu Stella D. E", role: "MBChB / MD", credentials: "Ghana 🇬🇭 / Nigeria 🇳🇬", bio: "", image: { src: "/stella.png", alt: "Dr. Iyanuolu Stella D. E portrait" } },
   { name: "Dr. Akshaya Sharma", role: "MD", credentials: "Russia 🇷🇺 / India 🇮🇳", bio: "", image: { src: "/akshaya.png", alt: "Dr. Akshaya Sharma portrait" } },
@@ -22,7 +22,7 @@ const TEAM = [
   { name: "Dr. Pearl Manu", role: "Medical Officer - GP", credentials: "Russia 🇷🇺 / Ghana 🇬🇭", bio: "", image: { src: "/pearl.png", alt: "Dr. Pearl Manu portrait" } },
   { name: "Dr. Goodman Idigiri", role: "MD", credentials: "Ukraine 🇺🇦 / Great Britain 🇬🇧 / Nigeria 🇳🇬", bio: "", image: { src: "/goodman.png", alt: "Dr. Goodman Idigiri portrait" } },
   { name: "Dr. Owen Michael Irowa", role: "MD - Medical Performance and Body Optimization Physician", credentials: "Nigeria 🇳🇬 / USA 🇺🇸", bio: "", image: { src: "/owen.png", alt: "Dr. Owen Michael Irowa portrait" } },
-  { name: "Dr. Bashirat Hassan Olamide", role: "MD (Founder, Consult Dr B)", credentials: "Russia 🇷🇺 / Nigeria 🇳🇬", bio: "", image: { src: "/bashirat.png", alt: "Dr. Bashirat Hassan Olamide portrait" } },
+  { name: "Dr. Bashirat Hassan Olamide", role: "MD (Founder & Director)", credentials: "Russia 🇷🇺 / Nigeria 🇳🇬", bio: "", image: { src: "/bashirat.png", alt: "Dr. Bashirat Hassan Olamide portrait" } },
 ];
 
 const ADMIN = {
@@ -45,7 +45,7 @@ export default function TeamPage() {
         <div className="section-container space-y-14">
           <Reveal>
             <h2 className="font-heading text-3xl text-center text-secondary">
-              Our Medical Specialists
+              Our Ground Medical Team
             </h2>
           </Reveal>
 
