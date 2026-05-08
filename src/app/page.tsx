@@ -121,6 +121,7 @@ export default function HomePage() {
           <video
             ref={videoRef}
             src="/Human-body-hero.mp4"
+            poster="/Background.png"
             autoPlay
             muted
             playsInline
