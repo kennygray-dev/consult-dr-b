@@ -116,7 +116,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
+      <section className="relative min-h-[100dvh] md:min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
         <div className="absolute inset-0">
           <video
             ref={videoRef}
