@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   url: "https://www.consultdrbintl.com",
   images: [
     {
-      url: "https://www.consultdrbintl.com/consultdrb.png",
+      url: "/consultdrb.png",
       width: 1200,
       height: 630,
       alt: "Consult Dr B",
