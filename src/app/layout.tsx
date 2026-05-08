@@ -33,6 +33,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.consultdrbintl.com"),
   title: {
     default: "Consult Dr B | Precision Medicine & Personalised Care",
     template: "%s | Consult Dr B",
