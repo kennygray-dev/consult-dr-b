@@ -75,9 +75,9 @@ export default function HomePage() {
       overlayRef.current.style.background = `
         radial-gradient(
           circle 280px at ${x}px ${y}px,
-          rgba(0,0,0,0.15) 0%,
-          rgba(0,0,0,0.50) 40%,
-          rgba(0,0,0,0.65) 70%
+          rgba(255,255,255,0.10) 0%,
+          rgba(0,0,0,0.35) 40%,
+          rgba(0,0,0,0.55) 70%
         )
       `;
     }
@@ -116,7 +116,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-[100dvh] md:min-h-[90vh] flex items-center overflow-hidden md:mx-4 md:rounded-b-2xl">
+      <section className="relative min-h-[100dvh] md:min-h-[90vh] flex items-center overflow-hidden md:mx-1 md:rounded-b-xl">
         <div className="absolute inset-0">
           <video
             ref={videoRef}
@@ -128,7 +128,7 @@ export default function HomePage() {
             loop
             preload="auto"
             style={{ willChange: "transform" }}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
           />
         </div>
 
