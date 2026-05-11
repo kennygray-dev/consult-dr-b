@@ -69,7 +69,7 @@ export default function ExecutivePerformancePage() {
       // ── What You Can Expect ───────────────────────────────────────────
       outcomes={{
         sectionTitle: "What You Can Expect",
-        image: IMAGES.serviceAestheticSkin.src,
+        image: "/gym.png",
         imageAlt: "Fitness training",
         items: [
           { label: "Improved strength and physical performance" },
