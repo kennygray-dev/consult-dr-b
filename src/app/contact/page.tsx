@@ -118,10 +118,16 @@ export default function ContactPage() {
                   </p>
 
                   <a
-                    href={`mailto:${CONTACT_INFO.email}`}
+                    href={`mailto:${CONTACT_INFO.primaryEmail}`}
                     className="w-full inline-flex items-center justify-center bg-secondary text-white font-semibold py-4 px-6 rounded-xl hover:opacity-90 transition"
                   >
-                    Send Email
+                    General Enquiries
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT_INFO.secondaryEmail}`}
+                    className="w-full inline-flex items-center justify-center bg-secondary/80 text-white font-semibold py-4 px-6 rounded-xl hover:opacity-90 transition"
+                  >
+                    Admin Support
                   </a>
                 </div>
               </div>

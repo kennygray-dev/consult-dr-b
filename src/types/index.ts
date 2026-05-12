@@ -64,8 +64,7 @@ export interface PeptideItem extends NutritionItem {
 
 // ─── Contact ──────────────────────────────────────────────────────────────────
 export interface ContactInfo {
-  address: string;
   phone: string;
-  email: string;
-  hours: string;
+  primaryEmail: string;
+  secondaryEmail: string;
 }

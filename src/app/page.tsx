@@ -33,7 +33,7 @@ const FAQ_ITEMS = [
   {
     question: "Do you offer international consultations?",
     answer:
-      "Yes. Telemedical consultations and concierge coordination are available for international patients.",
+      "Our network extends across multiple countries through carefully selected expert physicians, research laboratories, advance testing centers ,wellness partners, and concierge affiliates  allowing us to coordinate elite medical and wellness experiences internationally with precision, privacy, and excellence.",
   },
 ];
 
@@ -190,7 +190,7 @@ export default function HomePage() {
         <div className="section-container">
           <Reveal>
             <FAQSection items={FAQ_ITEMS} />
-          </Reveal>
+          </Reveal> 
         </div>
       </section>
 

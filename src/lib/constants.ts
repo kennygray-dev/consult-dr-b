@@ -27,10 +27,9 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const CONTACT_INFO: ContactInfo = {
-  address: "123 Medical Drive, Suite 400, Beverly Hills, CA 90210",
-  phone:   "+1 (800) 555-0199",
-  email:   "info@consultdrb.com",
-  hours:   "Mon – Fri: 8 AM – 6 PM",
+  phone: "+2347072261185",
+  primaryEmail: "concierge@consultdrb.com",
+  secondaryEmail: "admin@consultdrbintl.com",
 };
 
 
