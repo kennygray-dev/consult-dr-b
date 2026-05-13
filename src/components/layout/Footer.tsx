@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, MapPin } from "lucide-react";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME, CONTACT_INFO } from "@/lib/constants";
 
 const SERVICES_LINKS = [
   { label: "Metabolic & Weight Optimization", href: "/services/metabolic-weight-optimization" },
@@ -153,6 +153,26 @@ export default function Footer() {
               <Instagram size={15} />
               Instagram
             </a>
+
+              <div className="mt-4 space-y-2">
+                <h4 className="text-secondary font-normal text-base tracking-wide">
+                  E-mail
+                </h4>
+
+                <a
+                  href={`mailto:${CONTACT_INFO.primaryEmail}`}
+                  className="flex items-center gap-2.5 text-sm text-black/55 hover:text-secondary underline underline-offset-2"
+                >
+                  {CONTACT_INFO.primaryEmail}
+                </a>
+
+                <a
+                  href={`mailto:${CONTACT_INFO.secondaryEmail}`}
+                  className="flex items-center gap-2.5 text-sm text-black/55 hover:text-secondary underline underline-offset-2"
+                >
+                  {CONTACT_INFO.secondaryEmail}
+                </a>
+              </div>
           </div>
         </div>
 
