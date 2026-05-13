@@ -33,14 +33,17 @@ const ADMIN = {
   image: { src: "/osamede.jpg", alt: "OSHODIN PRECIOUS OSAMEDE portrait" },
 };
 
+const teamMembers = TEAM.filter((m) => !m.name.includes("Bashirat Hassan Olamide"));
+const founder = TEAM.find((m) => m.name.includes("Bashirat Hassan Olamide"))!;
+
 export default function TeamPage() {
   return (
     <>
-     <PageHero
-  title="Our Team"
-  image="/aboutpageteam.png"
-  imageAlt="Consult Dr B team"
-/>
+      <PageHero
+        title="Our Team"
+        image="/aboutpageteam.png"
+        imageAlt="Consult Dr B team"
+      />
       <section className="py-24 bg-white">
         <div className="section-container space-y-14">
           <Reveal>
@@ -49,38 +52,59 @@ export default function TeamPage() {
             </h2>
           </Reveal>
 
+          {/* Grid of all doctors except the founder */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TEAM.map((member, i) => {
-              const isFounder = member.name.includes("Bashirat Hassan Olamide");
-
-              return (
-                <Reveal key={member.name} delay={i * 0.05}>
-                  <div className={isFounder ? "lg:col-span-3 flex justify-center" : ""}>
-                    <div className="group overflow-hidden max-w-sm w-full rounded-2xl h-[32rem] flex flex-col bg-white border border-black/10 shadow-sm">
-                      <div className="relative flex-1 overflow-hidden">
-                        <Image
-                          src={member.image.src}
-                          alt={member.image.alt}
-                          fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          quality={80}
-                          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </div>
-                      <div className="p-6 space-y-3 text-center border-t border-black/10">
-                        <div>
-                          <h3 className="font-heading text-xl text-primary">{member.name}</h3>
-                          <p className="text-secondary text-sm font-semibold">{member.role}</p>
-                          <p className="text-gray-400 text-xs mt-0.5 tracking-wide">{member.credentials}</p>
-                        </div>
-                        <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
-                      </div>
-                    </div>
+            {teamMembers.map((member, i) => (
+              <Reveal key={member.name} delay={i * 0.05}>
+                <div className="group overflow-hidden max-w-sm w-full rounded-2xl h-[32rem] flex flex-col bg-white border border-black/10 shadow-sm">
+                  <div className="relative flex-1 overflow-hidden">
+                    <Image
+                      src={member.image.src}
+                      alt={member.image.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={80}
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                </Reveal>
-              );
-            })}
+                  <div className="p-6 space-y-3 text-center border-t border-black/10">
+                    <div>
+                      <h3 className="font-heading text-xl text-primary">{member.name}</h3>
+                      <p className="text-secondary text-sm font-semibold">{member.role}</p>
+                      <p className="text-gray-400 text-xs mt-0.5 tracking-wide">{member.credentials}</p>
+                    </div>
+                    <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
+
+          {/* Founder — centered below the grid, same card dimensions */}
+          <Reveal>
+            <div className="flex justify-center">
+              <div className="group overflow-hidden max-w-sm w-full rounded-2xl h-[32rem] flex flex-col bg-white border border-black/10 shadow-sm">
+                <div className="relative flex-1 overflow-hidden">
+                  <Image
+                    src={founder.image.src}
+                    alt={founder.image.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={80}
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 space-y-3 text-center border-t border-black/10">
+                  <div>
+                    <h3 className="font-heading text-xl text-primary">{founder.name}</h3>
+                    <p className="text-secondary text-sm font-semibold">{founder.role}</p>
+                    <p className="text-gray-400 text-xs mt-0.5 tracking-wide">{founder.credentials}</p>
+                  </div>
+                  <p className="text-gray-400 text-sm leading-relaxed">{founder.bio}</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -97,12 +121,20 @@ export default function TeamPage() {
                   src={ADMIN.image.src}
                   alt={ADMIN.image.alt}
                   fill
-                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={80}
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6 space-y-2 border-t border-black/10">
-                <h3 className="font-heading text-xl text-primary">{ADMIN.name}</h3>
-                <p className="text-secondary text-sm font-semibold">{ADMIN.role}</p>
+              <div className="p-6 space-y-3 text-center border-t border-black/10">
+                <div>
+                  <h3 className="font-heading text-xl text-primary">{ADMIN.name}</h3>
+                  <p className="text-secondary text-sm font-semibold">{ADMIN.role}</p>
+                  {ADMIN.credentials ? (
+                    <p className="text-gray-400 text-xs mt-0.5 tracking-wide">{ADMIN.credentials}</p>
+                  ) : null}
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed">{ADMIN.bio}</p>
               </div>
             </div>
           </Reveal>
