@@ -28,7 +28,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const CONTACT_INFO: ContactInfo = {
   phone: "+2347072261185",
-  primaryEmail: "concierge@consultdrb.com",
+  primaryEmail: "concierge@consultdrbintl.com",
   secondaryEmail: "admin@consultdrbintl.com",
 };
 
